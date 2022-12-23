@@ -12,17 +12,17 @@ import NotFound from './pages/404/404.jsx'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <Header />
-      <Routes>
-        <Route path="*" element={<NotFound />}></Route>
-        <Route index element={<Home />}></Route>
-        <Route path="/about" element={<About />}></Route>
-      </Routes>
-      <Footer />
-    </BrowserRouter>
-  </React.StrictMode>
+   <React.StrictMode>
+      <BrowserRouter>
+         <Header />
+         <Routes>
+            <Route path="*" element={<NotFound />}></Route>
+            <Route index element={<Home />}></Route>
+            <Route path="/about" element={<About />}></Route>
+         </Routes>
+         <Footer />
+      </BrowserRouter>
+   </React.StrictMode>
 )
 
 reportWebVitals()

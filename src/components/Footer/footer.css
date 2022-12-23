@@ -1,0 +1,26 @@
+footer {
+    background-color: black;
+    color: white;
+    font-size: 12px;
+    font-weight: 500;
+
+    display: flex;
+    justify-content: center;
+}
+
+footer img {
+    filter: brightness(10);
+}
+
+.footer_logo-container {
+    width: 53%;
+    margin: auto;
+}
+
+.footer_container {
+    margin: 62px;
+}
+
+.footer_description {
+    margin-top: 1.4em;
+}

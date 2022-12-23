@@ -1,3 +1,31 @@
 header {
+    padding: 20px;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_logo-container {
+    width: 43%;
+}
+
+.menu_links ul {
+    display: flex;
+    gap: 15px;
+}
+
+a {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 12px;
+    color: #FF6060;
+    text-decoration: none;
+
+    /* border-bottom: 1px solid transparent;
+    transition: border-bottom .4s; */
+}
+
+a:hover {
+    text-decoration: underline;
+    /* border-bottom: 1px solid #FF6060; */
 }
