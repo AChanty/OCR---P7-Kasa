@@ -1,6 +1,6 @@
 footer {
     background-color: black;
-    color: white;
+    color: var(--text-color);
     font-size: 12px;
     font-weight: 500;
 

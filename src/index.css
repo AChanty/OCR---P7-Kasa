@@ -2,6 +2,10 @@ html,body,p,ol,ul,li,dl,dt,dd,blockquote,figure,fieldset,legend,textarea,pre,ifr
 
 body {
     background-color: white;
-
     font-family: 'Montserrat', sans-serif;
+}
+
+:root {
+    --text-color: white;
+    --theme-color: #FF6060;
 }

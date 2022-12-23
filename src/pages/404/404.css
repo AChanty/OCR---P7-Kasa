@@ -32,5 +32,5 @@
 .error_title, 
 .error_text,
 .error_back {
-    color: #FF6060;
+    color: var(--theme-color);
 }

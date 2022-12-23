@@ -16,7 +16,7 @@
 
 .banner_text {
     font-size: 24px;
-    color: white;
+    color: var(--text-color);
     position: relative;
     padding: 32px 100px 32px 16px;
     display: flex;
