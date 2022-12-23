@@ -1,0 +1,36 @@
+.error_container {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.error_message-container {
+    text-align: center;
+}
+
+.error_title {
+    font-size: 96px;
+    font-weight: 700;
+}
+
+.error_text-container {
+    margin: 0 57px;
+}
+
+.error_text {
+    font-size: 18px;
+    line-height: 1.4em;
+}
+
+.error_back {
+    font-size: 14px;
+    text-decoration: underline;
+}
+
+.error_title, 
+.error_text,
+.error_back {
+    color: #FF6060;
+}
