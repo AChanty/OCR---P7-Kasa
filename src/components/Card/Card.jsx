@@ -1,14 +1,19 @@
+import { Link } from 'react-router-dom'
 import './card.css'
 import Logements from './../../assets/datas/logements.json'
 
 function Card() {
    return (
-      <div>
+      <div className="card-container">
          {Logements.map((logement) => (
-            <div className="card-item" key={logement.id}>
-               {logement.title}
-               <img src={logement.cover} alt={logement.title} />
-            </div>
+            <Link href="#" className="card-item" key={logement.id}>
+               <p className="card-title">{logement.title}</p>
+               <img
+                  className="card-img"
+                  src={logement.cover}
+                  alt={logement.title}
+               />
+            </Link>
          ))}
       </div>
    )

@@ -14,7 +14,7 @@ header {
     gap: 15px;
 }
 
-a {
+header a {
     text-transform: uppercase;
     font-weight: 500;
     font-size: 12px;
@@ -22,7 +22,7 @@ a {
     text-decoration: none;
 }
 
-a:hover {
+header a:hover {
     text-decoration: underline;
 }
 

@@ -31,6 +31,6 @@
 
 .error_title, 
 .error_text,
-.error_back {
+.error_back-link:visited {
     color: var(--theme-color);
 }

@@ -14,7 +14,9 @@ function NotFound() {
          </div>
          <div className="error_back-container">
             <p className="error_back">
-               <Link to="/">Retourner sur la page d'accueil</Link>
+               <Link to="/" className="error_back-link">
+                  Retourner sur la page d'accueil
+               </Link>
             </p>
          </div>
       </div>
