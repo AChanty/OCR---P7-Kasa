@@ -1,9 +1,14 @@
 import './home.css'
+import Banner from '../../components/Banner/Banner'
+import Background from './../../assets/img/banner.png'
 
 function Home() {
    return (
       <div className="home_container">
-         <h1>Accueil</h1>
+         <Banner
+            text="Chez vous, partout et ailleurs"
+            background={Background}
+         />
       </div>
    )
 }
