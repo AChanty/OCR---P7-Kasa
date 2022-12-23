@@ -26,6 +26,7 @@ function Logement() {
          <p>{location}</p>
          <ul>
             {tags.map((tags) => {
+               // créé un <li> pour chaque tag de logement.tags
                return <li key={tags}>{tags}</li>
             })}
          </ul>
@@ -38,6 +39,7 @@ function Logement() {
          <h3>Equipements</h3>
          <ul>
             {equipments.map((equipments) => {
+               // créé un <li> pour chaque equipment de logement.equipments
                return <li key={equipments}>{equipments}</li>
             })}
          </ul>
