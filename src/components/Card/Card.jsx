@@ -6,7 +6,11 @@ function Card() {
    return (
       <div className="card-container">
          {Logements.map((logement) => (
-            <Link href="#" className="card-item" key={logement.id}>
+            <Link
+               to={`logement/${logement.id}`}
+               className="card-item"
+               key={logement.id}
+            >
                <p className="card-title">{logement.title}</p>
                <img
                   className="card-img"
