@@ -2,6 +2,8 @@ import './logement.css'
 import Logements from './../../assets/datas/logements.json'
 import { Navigate, useParams } from 'react-router-dom'
 import Tag from './../../components/Tag/Tag.jsx'
+import Rating from './../../components/Rating/Rating.jsx'
+
 // import Tag2 from './../../components/Tag/Tag.jsx'
 
 // import Carousel from './../../components/Carousel/Carousel.jsx'
@@ -61,7 +63,9 @@ function Logement() {
 
          <div className="rating-host_container">
             <div className="rating_wrapper">
-               <p>{rating}</p>
+               {/* <p>{rating}</p> */}
+               <Rating starType="full" ratingValue={rating} />
+               <Rating starType="empty" ratingValue={5 - rating} />
             </div>
             <div className="host_wrapper">
                <p className="host_name">{host.name}</p>
