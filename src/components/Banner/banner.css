@@ -1,5 +1,9 @@
 .banner_container {
     position: relative;
+
+    /* width: 335px;
+    height: 111px;
+    margin: auto; */
 }
 
 .banner_container img {
@@ -15,6 +19,8 @@
 }
 
 .banner_text {
+    user-select: none;
+
     font-size: 24px;
     color: var(--text-color);
     position: relative;
