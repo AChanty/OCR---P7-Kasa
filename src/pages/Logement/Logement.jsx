@@ -38,7 +38,10 @@ function Logement() {
          <h1 className="logement_title">{title}</h1>
          <p className="logement_location">{location}</p>
 
-         <Tag tagsList={tags} />
+         <div>
+            <Tag tags={tags} />
+         </div>
+
          {/* <ul className="tags_container">
             {tags.map((tags) => {
                // créé un <li> pour chaque tag de logement.tags
