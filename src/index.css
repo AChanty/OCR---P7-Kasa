@@ -9,3 +9,7 @@ body {
     --text-color: white;
     --theme-color: #FF6060;
 }
+
+.main-wrapper {
+    padding: 0 20px;
+}

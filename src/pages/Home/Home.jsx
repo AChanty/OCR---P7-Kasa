@@ -5,7 +5,7 @@ import Card from '../../components/Card/Card'
 
 function Home() {
    return (
-      <div className="home_container">
+      <div className="main-wrapper">
          <Banner
             text="Chez vous, partout et ailleurs"
             background={MobileBackground}

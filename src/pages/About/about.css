@@ -1,0 +1,6 @@
+.about_image {
+    border-radius: 25px;
+    filter: brightness(70%);
+    height: 223px;
+    object-fit: cover;
+}

@@ -3,7 +3,6 @@ import Logements from './../../assets/datas/logements.json'
 import { Navigate, useParams } from 'react-router-dom'
 import Tag from './../../components/Tag/Tag.jsx'
 import Rating from './../../components/Rating/Rating.jsx'
-
 import Collapse from './../../components/Collapse/Collapse.jsx'
 
 // import Tag2 from './../../components/Tag/Tag.jsx'
@@ -34,7 +33,7 @@ function Logement() {
    } = logement
 
    return (
-      <div className="logement_container">
+      <div className="main-wrapper">
          {/* <Carousel /> */}
          <img className="logement_carousel" src={cover} alt={title} />
          <h1 className="logement_title">{title}</h1>
@@ -70,16 +69,6 @@ function Logement() {
                </ul>
             }
          />
-
-         {/* <h3>Description</h3>
-         <p>{description}</p>
-         <h3>Equipements</h3>
-         <ul>
-            {equipments.map((equipments) => {
-               // créé un <li> pour chaque equipment de logement.equipments
-               return <li key={equipments}>{equipments}</li>
-            })}
-         </ul> */}
       </div>
    )
 }

@@ -5,7 +5,7 @@ import arrowIcon from './../../assets/icons/arrow.svg'
 function Collapse({ headerName, content }) {
    const [isOpen, isClosed] = useState(true)
 
-   return isOpen ? ( // si le composant est ouvert, affiche ce contenu qui contient les informations relatives à l'onglet ouvert
+   return isOpen ? ( // si le composant est ouvert, affiche le contenu qui contient les informations relatives à l'onglet ouvert
       <div className="collapse_item">
          <div className="collapse_head" onClick={() => isClosed(false)}>
             <h3>{headerName}</h3>
