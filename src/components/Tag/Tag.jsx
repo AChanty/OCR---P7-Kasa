@@ -8,7 +8,7 @@ function Tag(props) {
          {props.tags.map((tags) => {
             // créé un <li> pour chaque tag de logement.tags
             return (
-               <li key={tags} className="logement_tag">
+               <li key={tags} className="tag_item">
                   {tags}
                </li>
             )

@@ -4,6 +4,8 @@ import { Navigate, useParams } from 'react-router-dom'
 import Tag from './../../components/Tag/Tag.jsx'
 import Rating from './../../components/Rating/Rating.jsx'
 
+import Collapse from './../../components/Collapse/Collapse.jsx'
+
 // import Tag2 from './../../components/Tag/Tag.jsx'
 
 // import Carousel from './../../components/Carousel/Carousel.jsx'
@@ -42,28 +44,6 @@ function Logement() {
             <Tag tags={tags} />
          </div>
 
-         {/* <ul className="tags_container">
-            {tags.map((tags) => {
-               // créé un <li> pour chaque tag de logement.tags
-               return (
-                  <li key={tags} className="logement_tags">
-                     {tags}
-                  </li>
-               )
-            })}
-         </ul> */}
-
-         {/* <ul className="tags_container">
-            {tags.map((tags) => {
-               // créé un <li> pour chaque tag de logement.tags
-               return (
-                  <li key={tags} className="logement_tags">
-                     <Tag2 />
-                  </li>
-               )
-            })}
-         </ul> */}
-
          <div className="rating-host_container">
             <div className="rating_wrapper">
                {/* <p>{rating}</p> */}
@@ -76,7 +56,10 @@ function Logement() {
             </div>
          </div>
 
-         <h3>Description</h3>
+         <Collapse headerName="Description" description={description} />
+         <Collapse headerName="Équipements" equipments={equipments} />
+
+         {/* <h3>Description</h3>
          <p>{description}</p>
          <h3>Equipements</h3>
          <ul>
@@ -84,7 +67,7 @@ function Logement() {
                // créé un <li> pour chaque equipment de logement.equipments
                return <li key={equipments}>{equipments}</li>
             })}
-         </ul>
+         </ul> */}
       </div>
    )
 }

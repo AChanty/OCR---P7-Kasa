@@ -1,0 +1,38 @@
+.collapse_item {
+    margin: 20px 0;
+}
+
+.collapse_head {
+    background-color: var(--theme-color);
+    color: var(--text-color);
+    cursor: pointer;
+    user-select: none;
+
+    display: flex;
+    justify-content: space-between;
+
+    padding: 5px 10px;
+    border-radius: 5px;
+    z-index: 99;
+}
+
+.collapse_head h3 {
+    font-size: 13px;
+    line-height: 1.4em;
+}
+
+.collapse_head img {
+    width: 15px;
+}
+
+.collapse_content {
+    /* background: #F7F7F7; */
+    background: red;
+    /* padding: 10px 10px 5px 10px; */
+    padding: 20px 10px 5px 10px;
+    border-radius: 5px;
+    z-index: 1;
+
+    font-size: 12px;
+    margin-top: -5px;
+}

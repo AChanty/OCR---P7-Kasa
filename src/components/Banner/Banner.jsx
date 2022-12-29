@@ -1,8 +1,8 @@
 import './banner.css'
 
-function Banner(props) {
-   let text = props.text
-   let background = props.background
+function Banner({ text, background }) {
+   // let text = props.text
+   // let background = props.background
    return (
       <div className="banner_container">
          <div className="banner_text-container">
