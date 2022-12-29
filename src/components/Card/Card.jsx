@@ -7,7 +7,7 @@ function Card() {
       <div className="card-container">
          {Logements.map(
             (
-               logement // créé un div.card-container pour chaque objet disponible dans logement.json
+               logement // créé un div.card-item pour chaque objet disponible dans logement.json
             ) => (
                <Link
                   to={`logement/${logement.id}`} // le lien dirige vers logement/:logement.id
