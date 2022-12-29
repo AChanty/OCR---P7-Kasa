@@ -2,6 +2,10 @@
     margin: 20px 0;
 }
 
+.collapse_item:last-child {
+    margin-bottom: 0;
+}
+
 .collapse_head {
     background-color: var(--theme-color);
     color: var(--text-color);
@@ -26,8 +30,8 @@
 }
 
 .collapse_content {
-    /* background: #F7F7F7; */
-    background: red;
+    background: #F7F7F7;
+    color: var(--theme-color);
     /* padding: 10px 10px 5px 10px; */
     padding: 20px 10px 5px 10px;
     border-radius: 5px;

@@ -2,10 +2,10 @@ import './tag.css'
 // import Logements from './../../assets/datas/logements.json'
 // import { useParams } from 'react-router-dom'
 
-function Tag(props) {
+function Tag({ tags }) {
    return (
       <ul className="tags_container">
-         {props.tags.map((tags) => {
+         {tags.map((tags) => {
             // créé un <li> pour chaque tag de logement.tags
             return (
                <li key={tags} className="tag_item">

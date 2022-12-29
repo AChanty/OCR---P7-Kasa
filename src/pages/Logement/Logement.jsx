@@ -56,8 +56,21 @@ function Logement() {
             </div>
          </div>
 
-         <Collapse headerName="Description" description={description} />
-         <Collapse headerName="Équipements" equipments={equipments} />
+         <Collapse headerName="Description" content={description} />
+         <Collapse
+            headerName="Équipements"
+            content={
+               <ul>
+                  {equipments.map((equipments) => {
+                     return (
+                        <li key={equipments} className="equipements_item">
+                           {equipments}
+                        </li>
+                     )
+                  })}
+               </ul>
+            }
+         />
 
          {/* <h3>Description</h3>
          <p>{description}</p>
