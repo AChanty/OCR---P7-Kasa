@@ -20,7 +20,7 @@ import { ReactComponent as Star } from '../../assets/icons/star.svg'
 //    )
 // }
 
-function Rating({ ratingValue, starType }) {
+function Rating({ starType, ratingValue }) {
    //    const ratingValue = props.ratingValue
    const range = [1, 2, 3, 4, 5]
    const rating =
