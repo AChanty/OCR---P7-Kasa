@@ -46,7 +46,6 @@ function Logement() {
 
          <div className="rating-host_container">
             <div className="rating_wrapper">
-               {/* <p>{rating}</p> */}
                <Rating starType="full" ratingValue={rating} />
                <Rating starType="empty" ratingValue={5 - rating} />
             </div>
@@ -56,7 +55,7 @@ function Logement() {
             </div>
          </div>
 
-         <Collapse headerName="Description" content={description} />
+         <Collapse headerName="Description" content={<p>{description}</p>} />
          <Collapse
             headerName="Équipements"
             content={
