@@ -17,7 +17,7 @@
 
     padding: 5px 10px;
     border-radius: 5px;
-    z-index: 99;
+    position: relative;
 }
 
 .collapse_head h3 {
@@ -32,11 +32,9 @@
 .collapse_content {
     background: #F7F7F7;
     color: var(--theme-color);
-    /* padding: 10px 10px 5px 10px; */
+    font-size: 12px;
+    
     padding: 20px 10px 5px 10px;
     border-radius: 5px;
-    z-index: 1;
-
-    font-size: 12px;
     margin-top: -5px;
 }
