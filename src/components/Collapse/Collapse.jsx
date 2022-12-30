@@ -10,7 +10,8 @@ function Collapse({ headerName, content }) {
          <div className="collapse_head" onClick={() => isClosed(false)}>
             <h3>{headerName}</h3>
             <img
-               style={{ transition: '.4s' }}
+               className="collapse_head-closed"
+               //    style={{ transition: '.4s' }}
                src={arrowIcon}
                alt="icone flèche"
             />
@@ -22,11 +23,13 @@ function Collapse({ headerName, content }) {
          <div className="collapse_head" onClick={() => isClosed(true)}>
             <h3>{headerName}</h3>
             <img
-               style={{ transform: 'rotate(-180deg)', transition: '.4s' }}
+               className="collapse_head-opened"
+               //    style={{ transform: 'rotate(-180deg)', transition: '.4s' }}
                src={arrowIcon}
                alt="icone flèche"
             />
          </div>
+         <div className="collapse_content-closed"></div>
       </div>
    )
 }
