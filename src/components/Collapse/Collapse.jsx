@@ -29,6 +29,8 @@ function Collapse({ headerName, content }) {
                alt="icone flèche"
             />
          </div>
+
+         {/* change la classe de collapse_content pour pouvoir gérer les animations */}
          <div className="collapse_content-closed"></div>
       </div>
    )

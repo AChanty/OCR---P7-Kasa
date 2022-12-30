@@ -50,15 +50,15 @@
 
 .collapse_head-opened {
     transform: rotate(-180deg);
-    max-height: auto;
+
 }
 
 .collapse_content-closed {
     color: var(--theme-color);
     font-size: 12px;
-    max-height: 0;
     padding: 0 10px;
 
     /* transition à la fermeture */
     transition: 0.4s ease-out;
+    margin-top: 0;
 }
