@@ -50,15 +50,14 @@
 
 .collapse_head-opened {
     transform: rotate(-180deg);
-
 }
 
 .collapse_content-closed {
     color: var(--theme-color);
     font-size: 12px;
     padding: 0 10px;
+    margin-top: 0;
 
     /* transition à la fermeture */
     transition: 0.4s ease-out;
-    margin-top: 0;
 }

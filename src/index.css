@@ -13,3 +13,10 @@ body {
 .main-wrapper {
     padding: 0 20px;
 }
+
+@media screen and (min-width: 992px) {
+    .main-wrapper {
+        padding: 0 100px;
+        transition: .3s;
+    }
+}

@@ -29,8 +29,28 @@
     text-decoration: underline;
 }
 
-.error_title, 
+.error_title,
 .error_text,
 .error_back-link:visited {
     color: var(--theme-color);
+}
+
+@media screen and (min-width: 992px) {
+    .error_container {
+        height: 1024px;
+        justify-content: space-around;
+        transition: .3s;
+    }
+
+    .error_title {
+        font-size: 288px;
+    }
+
+    .error_text {
+        font-size: 36px;
+    }
+
+    .error_back {
+        font-size: 18px;
+    }
 }

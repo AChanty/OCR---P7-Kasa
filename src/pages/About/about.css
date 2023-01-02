@@ -1,6 +1,17 @@
 .about_image {
+    user-select: none;
     border-radius: 25px;
     filter: brightness(70%);
     height: 223px;
+    width: 100%;
     object-fit: cover;
+
+    display: block;
+    margin: auto;
 }
+
+/* responsive */
+/* .about_collapses-wrapper {
+    max-width: 70%;
+    margin: auto;
+} */

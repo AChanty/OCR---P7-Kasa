@@ -3,6 +3,9 @@
     width: 335px;
     height: 255px;
     object-fit: cover;
+    display: block;
+    margin: auto;
+    margin-bottom: 10px;
 }
 
 .logement_title,
@@ -42,4 +45,15 @@
 
 .rating-host_container {
     margin: 20px 0;
+}
+
+@media screen and (min-width: 992px) {
+    .logement_collapses-container {
+        display: flex;
+        gap: 75px;
+    }
+
+    .logement_collapse-item-container {
+        width: 50%;
+    }
 }

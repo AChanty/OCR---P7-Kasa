@@ -53,22 +53,30 @@ function Logement() {
                <img src={host.picture} alt={host.name} />
             </div>
          </div>
-
-         <Collapse headerName="Description" content={<p>{description}</p>} />
-         <Collapse
-            headerName="Équipements"
-            content={
-               <ul>
-                  {equipments.map((equipments) => {
-                     return (
-                        <li key={equipments} className="equipements_item">
-                           {equipments}
-                        </li>
-                     )
-                  })}
-               </ul>
-            }
-         />
+         <div className="logement_collapses-container">
+            <div className="logement_collapse-item-container">
+               <Collapse
+                  headerName="Description"
+                  content={<p>{description}</p>}
+               />
+            </div>
+            <div className="logement_collapse-item-container">
+               <Collapse
+                  headerName="Équipements"
+                  content={
+                     <ul>
+                        {equipments.map((equipments) => {
+                           return (
+                              <li key={equipments} className="equipements_item">
+                                 {equipments}
+                              </li>
+                           )
+                        })}
+                     </ul>
+                  }
+               />
+            </div>
+         </div>
       </div>
    )
 }
