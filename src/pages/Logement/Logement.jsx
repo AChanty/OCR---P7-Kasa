@@ -36,21 +36,25 @@ function Logement() {
       <div className="main-wrapper">
          {/* <Carousel /> */}
          <img className="logement_carousel" src={cover} alt={title} />
-         <h1 className="logement_title">{title}</h1>
-         <p className="logement_location">{location}</p>
+         <div className="logement_infos-wrapper">
+            <div className="logement_title-location-tags-container">
+               <h1 className="logement_title">{title}</h1>
+               <p className="logement_location">{location}</p>
 
-         <div>
-            <Tag tags={tags} />
-         </div>
-
-         <div className="rating-host_container">
-            <div className="rating_wrapper">
-               <Rating starType="full" ratingValue={rating} />
-               <Rating starType="empty" ratingValue={5 - rating} />
+               <div className="logement_tags-container">
+                  <Tag tags={tags} />
+               </div>
             </div>
-            <div className="host_wrapper">
-               <p className="host_name">{host.name}</p>
-               <img src={host.picture} alt={host.name} />
+
+            <div className="rating-host_container">
+               <div className="rating_wrapper">
+                  <Rating starType="full" ratingValue={rating} />
+                  <Rating starType="empty" ratingValue={5 - rating} />
+               </div>
+               <div className="host_wrapper">
+                  <p className="host_name">{host.name}</p>
+                  <img src={host.picture} alt={host.name} />
+               </div>
             </div>
          </div>
          <div className="logement_collapses-container">
