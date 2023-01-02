@@ -1,28 +1,38 @@
 footer {
-    background-color: black;
-    color: var(--text-color);
-    font-size: 12px;
-    font-weight: 500;
+   background-color: black;
+   color: var(--text-color);
+   font-size: 12px;
+   font-weight: 500;
 
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
+   display: flex;
+   justify-content: center;
+   margin-top: 20px;
 }
 
 footer img {
-    filter: brightness(10);
+   filter: brightness(10);
 }
 
 .footer_logo-container {
-    width: 53%;
-    margin: auto;
+   width: 53%;
+   margin: auto;
 }
 
 .footer_container {
-    margin: 62px;
+   margin: 62px;
 }
 
 .footer_description {
-    margin-top: 1.4em;
-    text-align: center;
+   margin-top: 1.4em;
+   text-align: center;
+}
+
+@media screen and (min-width: 992px) {
+   footer {
+      font-size: 24px;
+   }
+
+   .footer_logo-container {
+      width: 33%;
+   }
 }
