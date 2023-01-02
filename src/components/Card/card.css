@@ -1,16 +1,9 @@
-.card-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 .card-item {
-    color: var(--text-color);
-    margin-top: 20px;
-    font-size: 18px;
-    position: relative;
+   color: var(--text-color);
+   font-size: 18px;
+   position: relative;
 
-    /* height: 255px;
+   /* height: 255px;
     width: 335px; */
 }
 
@@ -19,19 +12,19 @@
 } */
 
 .card-img {
-    border-radius: 10px;
-    filter: brightness(50%);
+   border-radius: 10px;
+   filter: brightness(50%);
 
-    height: 255px;
-    width: 335px;
-    object-fit: cover;
+   height: 255px;
+   width: 335px;
+   object-fit: cover;
 }
 
 .card-title {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    z-index: 99;
-    line-height: 1.4em;
-    max-width: 40%;
+   position: absolute;
+   bottom: 20px;
+   left: 20px;
+   z-index: 99;
+   line-height: 1.4em;
+   max-width: 40%;
 }

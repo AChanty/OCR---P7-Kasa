@@ -10,7 +10,9 @@ function Home() {
             text="Chez vous, partout et ailleurs"
             background={MobileBackground}
          />
-         <Card />
+         <div className="home_cards-container">
+            <Card />
+         </div>
       </div>
    )
 }

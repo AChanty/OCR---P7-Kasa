@@ -74,6 +74,9 @@
       font-weight: 500;
       margin: 0;
    }
+   .logement_title-location-tags-container {
+      max-width: 70%;
+   }
    .logement_location {
       font-size: 18px;
    }
@@ -133,7 +136,7 @@
       font-weight: 400;
       padding: 35px 12px 15px 20px;
    }
-   .collapse_content-closed {
+   .logement_collapse-item-container .collapse_content-closed {
       font-size: 18px;
       padding: 0 18px;
    }
