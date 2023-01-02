@@ -27,6 +27,10 @@
    line-height: 1.4em;
 }
 
+.logement_tags-container {
+   margin: 10px 0;
+}
+
 .host_wrapper {
    display: flex;
    flex-direction: row;
@@ -74,7 +78,7 @@
       font-size: 18px;
    }
    .logement_tags-container {
-      margin-top: 20px;
+      margin: 20px 0 0 0;
    }
    .host_name {
       font-size: 18px;
@@ -95,9 +99,14 @@
       margin-top: 30px;
    }
 
+   .logement_infos-wrapper .rating_wrapper {
+      justify-content: flex-end;
+   }
+
    .rating-host_container {
       flex-direction: column-reverse;
       margin: 0;
+      align-items: flex-end;
    }
 
    .logement_collapses-container {
