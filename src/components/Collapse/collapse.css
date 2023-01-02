@@ -1,63 +1,90 @@
 .collapse_item {
-    margin: 20px 0;
+   margin: 20px 0;
 }
 
 .collapse_item:last-child {
-    margin-bottom: 0;
+   margin-bottom: 0;
 }
 
 .collapse_head {
-    background-color: var(--theme-color);
-    color: var(--text-color);
-    cursor: pointer;
-    user-select: none;
+   background-color: var(--theme-color);
+   color: var(--text-color);
+   cursor: pointer;
+   user-select: none;
 
-    display: flex;
-    justify-content: space-between;
+   display: flex;
+   justify-content: space-between;
 
-    padding: 5px 10px;
-    border-radius: 5px;
-    position: relative;
+   padding: 5px 10px;
+   border-radius: 5px;
+   position: relative;
 }
 
 .collapse_head h3 {
-    font-size: 13px;
-    line-height: 1.4em;
+   font-size: 13px;
+   line-height: 1.4em;
 }
 
 .collapse_head img {
-    width: 15px;
+   width: 15px;
 }
 
 .collapse_content {
-    background: #F7F7F7;
-    color: var(--theme-color);
-    font-size: 12px;
-    
-    padding: 20px 10px 5px 10px;
-    border-radius: 5px;
-    margin-top: -5px;
+   background: #f7f7f7;
+   color: var(--theme-color);
+   font-size: 12px;
 
-    /* transition à l'ouverture */
-    transition: 0.4s ease-out;
+   padding: 20px 10px 5px 10px;
+   border-radius: 5px;
+   margin-top: -5px;
+
+   /* transition à l'ouverture */
+   transition: 0.4s ease-out;
 }
 
 /* transition flèche */
 .collapse_head-opened,
 .collapse_head-closed {
-    transition: .4s ease;
+   transition: 0.4s ease;
 }
 
 .collapse_head-opened {
-    transform: rotate(-180deg);
+   transform: rotate(-180deg);
 }
 
 .collapse_content-closed {
-    color: var(--theme-color);
-    font-size: 12px;
-    padding: 0 10px;
-    margin-top: 0;
+   color: var(--theme-color);
+   font-size: 12px;
+   padding: 0 10px;
+   margin-top: 0;
 
-    /* transition à la fermeture */
-    transition: 0.4s ease-out;
+   /* transition à la fermeture */
+   transition: 0.4s ease-out;
+}
+
+@media screen and (min-width: 992px) {
+   .collapse_item {
+      margin: 30px 0;
+   }
+   .collapse_head {
+      padding: 7px 18px;
+   }
+
+   .collapse_head h3 {
+      font-size: 24px;
+   }
+
+   .collapse_head img {
+      width: 24px;
+   }
+   .collapse_content {
+      font-size: 24px;
+      line-height: 34px;
+      font-weight: 400;
+      padding: 27px 27px 15px 18px;
+   }
+   .collapse_content-closed {
+      font-size: 24px;
+      padding: 0 18px;
+   }
 }
