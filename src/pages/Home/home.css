@@ -22,7 +22,7 @@
 
       display: grid;
       gap: 60px;
-      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 
       margin-top: 43px;
       padding: 56px 50px;
@@ -46,5 +46,11 @@
       margin-top: 0;
       width: 340px;
       height: 340px;
+   }
+}
+
+@media screen and (min-width: 1300px) {
+   .home_cards-container .card-container {
+      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
    }
 }

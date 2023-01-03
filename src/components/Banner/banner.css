@@ -4,6 +4,10 @@
    /* width: 335px;
     height: 111px;
     margin: auto; */
+
+   /* background-image: url(../../assets/img/desktop-banner.png);
+   background-size: cover;
+   background-repeat: no-repeat; */
 }
 
 .banner_container img {
@@ -33,6 +37,10 @@
 @media screen and (min-width: 992px) {
    .banner_container {
       height: 223px;
+
+      /* background-image: url(../../assets/img/banner.png);
+      background-size: cover;
+      background-repeat: no-repeat; */
    }
 
    .banner_text {
