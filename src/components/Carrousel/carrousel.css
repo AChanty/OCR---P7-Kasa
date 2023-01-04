@@ -1,0 +1,42 @@
+.carrousel_content {
+   width: 100%;
+   height: 255px;
+   border-radius: 10px;
+
+   position: relative;
+}
+
+.carrousel_counter {
+   user-select: none;
+   color: white;
+   position: absolute;
+   bottom: 0;
+   /* permet de centrer l'élément absolute */
+   left: 50%;
+   transform: translate(-50%, 0);
+}
+
+.carrousel_previous-arrow {
+   top: 50%;
+}
+.carrousel_next-arrow {
+   right: 0;
+}
+
+.carrousel_previous-arrow,
+.carrousel_next-arrow {
+   cursor: pointer;
+   top: 50%;
+   position: absolute;
+   width: 20px;
+   height: 12px;
+}
+
+/* .test::before {
+   width: 100px;
+   height: 100px;
+   background-color: red;
+   content: '\2022';
+   font-size: 50px;
+   color: white;
+} */

@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './collapse.css'
-import arrowIcon from './../../assets/icons/arrow.svg'
+// import arrowIcon from './../../assets/icons/arrow.svg'
 import { ReactComponent as ArrowIcon } from './../../assets/icons/arrow.svg'
 
 function Collapse({ headerName, content }) {
