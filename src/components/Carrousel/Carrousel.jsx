@@ -3,12 +3,6 @@ import { useState } from 'react'
 import { ReactComponent as ArrowIcon } from './../../assets/icons/arrow.svg'
 
 function Carrousel({ images }) {
-   // const BulletPoints = () => {
-   //    for (let i = 0; i < images.length; i++) {
-   //       return <span>0</span>
-   //    }
-   // }
-
    let [count, setCount] = useState(1)
    const addCounter = () => {
       count === images.length ? setCount(1) : setCount(count + 1)
@@ -25,6 +19,25 @@ function Carrousel({ images }) {
       background: `url(${images[count - 1]})`, // affiche l'index correspondant de l'image
    }
 
+   const dotsContainerStyle = {
+      display: 'flex',
+      justifyContent: 'center',
+      gap: '5px',
+      bottom: '0',
+   }
+   const dotsStyle = {
+      color: 'white',
+      cursor: 'pointer',
+      fontSize: '40px',
+      userSelect: 'none',
+      // display: images.length === 1 ? 'none' : 'block',
+      visibility: images.length === 1 ? 'hidden' : 'visible', // n'affiche pas ce contenu s'il n'y a qu'une image
+   }
+
+   const goToSlide = (count) => {
+      setCount(count + 1)
+   }
+
    return (
       <div>
          {/* <div className="test"></div> */}
@@ -36,7 +49,8 @@ function Carrousel({ images }) {
                fill="white"
                onClick={removeCounter}
                style={{
-                  display: images.length === 1 ? 'none' : 'block', // n'affiche pas ce contenu s'il n'y a qu'une image
+                  // display: images.length === 1 ? 'none' : 'block', // n'affiche pas ce contenu s'il n'y a qu'une image
+                  visibility: images.length === 1 ? 'hidden' : 'visible', // n'affiche pas ce contenu s'il n'y a qu'une image
                   transform: 'rotate(-90deg)',
                }}
                alt="previous"
@@ -46,16 +60,38 @@ function Carrousel({ images }) {
                fill="white"
                onClick={addCounter}
                style={{
-                  display: images.length === 1 ? 'none' : 'block',
+                  // display: images.length === 1 ? 'none' : 'block',
+                  visibility: images.length === 1 ? 'hidden' : 'visible', // n'affiche pas ce contenu s'il n'y a qu'une image
                   transform: 'rotate(90deg)',
                }}
                alt="next"
             />
             <div
                className="carrousel_counter"
-               style={{ display: images.length === 1 ? 'none' : 'block' }}
+               style={{
+                  // display: images.length === 1 ? 'none' : 'block',
+                  visibility: images.length === 1 ? 'hidden' : 'visible', // n'affiche pas ce contenu s'il n'y a qu'une image
+               }}
             >
                {counter}
+            </div>
+
+            <div
+               className="carrousel_dots-container"
+               style={dotsContainerStyle}
+            >
+               {images.map((images, count) => {
+                  return (
+                     <div
+                        className="carrousel_dots"
+                        key={count}
+                        style={dotsStyle}
+                        onClick={() => goToSlide(count)} // renvoie au slide correspondant au point sur lequel on clique
+                     >
+                        •
+                     </div>
+                  )
+               })}
             </div>
          </div>
 
