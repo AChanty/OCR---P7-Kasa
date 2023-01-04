@@ -3,20 +3,20 @@ import { useState } from 'react'
 import { ReactComponent as ArrowIcon } from './../../assets/icons/arrow.svg'
 
 function Carrousel({ images }) {
-   let [count, setCount] = useState(1)
+   let [currentIndex, setIndex] = useState(1)
    const addCounter = () => {
-      count === images.length ? setCount(1) : setCount(count + 1)
+      currentIndex === images.length ? setIndex(1) : setIndex(currentIndex + 1)
    }
    const removeCounter = () => {
-      count === 1 ? setCount(images.length) : setCount(count - 1)
+      currentIndex === 1 ? setIndex(images.length) : setIndex(currentIndex - 1)
    }
 
-   const counter = count + '/' + images.length
+   const counter = currentIndex + '/' + images.length
 
    const carrouselStyle = {
       backgroundSize: 'cover',
       backgroundPosition: 'bottom',
-      background: `url(${images[count - 1]})`, // affiche l'index correspondant de l'image
+      background: `url(${images[currentIndex - 1]})`, // affiche l'index correspondant de l'image
    }
 
    const dotsContainerStyle = {
@@ -34,8 +34,8 @@ function Carrousel({ images }) {
       visibility: images.length === 1 ? 'hidden' : 'visible', // n'affiche pas ce contenu s'il n'y a qu'une image
    }
 
-   const goToSlide = (count) => {
-      setCount(count + 1)
+   const goToSlide = (currentIndex) => {
+      setIndex(currentIndex + 1)
    }
 
    return (
@@ -80,13 +80,13 @@ function Carrousel({ images }) {
                className="carrousel_dots-container"
                style={dotsContainerStyle}
             >
-               {images.map((images, count) => {
+               {images.map((images, currentIndex) => {
                   return (
                      <div
                         className="carrousel_dots"
-                        key={count}
+                        key={currentIndex}
                         style={dotsStyle}
-                        onClick={() => goToSlide(count)} // renvoie au slide correspondant au point sur lequel on clique
+                        onClick={() => goToSlide(currentIndex)} // renvoie au slide correspondant au point sur lequel on clique
                      >
                         •
                      </div>
