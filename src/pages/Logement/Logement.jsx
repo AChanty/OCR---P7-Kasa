@@ -4,10 +4,7 @@ import { Navigate, useParams } from 'react-router-dom'
 import Tag from './../../components/Tag/Tag.jsx'
 import Rating from './../../components/Rating/Rating.jsx'
 import Collapse from './../../components/Collapse/Collapse.jsx'
-
-// import Tag2 from './../../components/Tag/Tag.jsx'
-
-// import Carousel from './../../components/Carousel/Carousel.jsx'
+import Carrousel from './../../components/Carrousel/Carrousel.jsx'
 
 function Logement() {
    const { id } = useParams() // utilise l'id de l'url
@@ -24,6 +21,7 @@ function Logement() {
    const {
       cover,
       title,
+      pictures,
       location,
       tags,
       rating,
@@ -34,7 +32,7 @@ function Logement() {
 
    return (
       <div className="main-wrapper">
-         {/* <Carousel /> */}
+         <Carrousel images={pictures} />
          <img className="logement_carousel" src={cover} alt={title} />
          <div className="logement_infos-wrapper">
             <div className="logement_title-location-tags-container">
