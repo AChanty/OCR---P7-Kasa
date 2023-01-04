@@ -21,7 +21,7 @@ function Carrousel({ images }) {
 
    const carrouselStyle = {
       backgroundSize: 'cover',
-      backgroundPosition: 'center',
+      backgroundPosition: 'bottom',
       background: `url(${images[count - 1]})`, // affiche l'index correspondant de l'image
    }
 

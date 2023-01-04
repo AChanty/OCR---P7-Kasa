@@ -10,7 +10,8 @@
    user-select: none;
    color: white;
    position: absolute;
-   bottom: 0;
+   font-size: 14px;
+   bottom: 6%;
    /* permet de centrer l'élément absolute */
    left: 50%;
    transform: translate(-50%, 0);
@@ -40,3 +41,24 @@
    font-size: 50px;
    color: white;
 } */
+
+@media screen and (min-width: 992px) {
+   .carrousel_content {
+      height: 415px;
+   }
+   .carrousel_previous-arrow,
+   .carrousel_next-arrow {
+      width: 80px;
+      height: 46px;
+      transition: 0.2s;
+   }
+   .carrousel_previous-arrow:hover,
+   .carrousel_next-arrow:hover {
+      height: 50px;
+      width: 84px;
+      transition: 0.2s;
+   }
+   .carrousel_counter {
+      font-size: 18px;
+   }
+}

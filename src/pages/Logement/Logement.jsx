@@ -19,7 +19,6 @@ function Logement() {
    }
 
    const {
-      cover,
       title,
       pictures,
       location,
@@ -33,7 +32,6 @@ function Logement() {
    return (
       <div className="main-wrapper">
          <Carrousel images={pictures} />
-         {/* <img className="logement_carousel" src={cover} alt={title} /> */}
          <div className="logement_infos-wrapper">
             <div className="logement_title-location-tags-container">
                <h1 className="logement_title">{title}</h1>
