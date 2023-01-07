@@ -1,11 +1,18 @@
 import './about.css'
 import Collapse from './../../components/Collapse/Collapse.jsx'
 import Image from './../../assets/img/about-background.jpg'
+import MobileImage from './../../assets/img/about-responsive-background.png'
+import ResponsiveRules from '../../../src/assets/utils/Responsive'
 
 function About() {
    return (
       <div className="main-wrapper">
-         <img className="about_image" src={Image} alt="about" />
+         {ResponsiveRules(
+            992, // change l'image lorsque l'écran est supérieur à 992px
+            <img className="about_image" src={MobileImage} alt="about" />,
+            <img className="about_image" src={Image} alt="about" />
+         )}
+         {/* <img className="about_image" src={Image} alt="about" /> */}
          <div className="about_collapses-wrapper">
             <Collapse
                headerName="Fiabilité"

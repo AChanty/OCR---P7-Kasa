@@ -38,14 +38,14 @@ function Home() {
    return (
       <div className="main-wrapper">
          {ResponsiveRules(
-            992,
-            <Banner
-               text="Chez vous, partout et ailleurs"
-               background={MobileBackground}
-            />,
+            992, // change l'image de fond lorsque l'écran est supérieur à 992px
             <Banner
                text="Chez vous, partout et ailleurs"
                background={DesktopBackground}
+            />,
+            <Banner
+               text="Chez vous, partout et ailleurs"
+               background={MobileBackground}
             />
          )}
          <div className="home_cards-container">
