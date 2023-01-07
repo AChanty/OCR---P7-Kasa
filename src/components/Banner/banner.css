@@ -34,6 +34,21 @@
    justify-content: flex-start;
 }
 
+@media screen and (min-width: 768px) {
+   .banner_container {
+      height: 123px;
+
+      /* background-image: url(../../assets/img/banner.png);
+       background-size: cover;
+       background-repeat: no-repeat; */
+   }
+
+   .banner_text {
+      padding: 50px 0;
+      justify-content: center;
+   }
+}
+
 @media screen and (min-width: 992px) {
    .banner_container {
       height: 223px;

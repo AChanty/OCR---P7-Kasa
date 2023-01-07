@@ -5,9 +5,13 @@ import { ReactComponent as ArrowIcon } from './../../assets/icons/arrow.svg'
 function Carrousel({ images }) {
    let [currentIndex, setIndex] = useState(1)
    const addCounter = () => {
+      // si l'image affichée est la dernière du tableau, affiche la première lors du clic
+      // sinon affiche l'image suivante du tableau
       currentIndex === images.length ? setIndex(1) : setIndex(currentIndex + 1)
    }
    const removeCounter = () => {
+      // si l'image affichée est la première du tableau, affiche la première lors du clic
+      // sinon affiche l'image précédente du tableau
       currentIndex === 1 ? setIndex(images.length) : setIndex(currentIndex - 1)
    }
 
@@ -16,7 +20,7 @@ function Carrousel({ images }) {
    const carrouselStyle = {
       backgroundSize: 'cover',
       backgroundPosition: 'bottom',
-      background: `url(${images[currentIndex - 1]})`, // affiche l'index correspondant de l'image
+      background: `url(${images[currentIndex - 1]})`, // affiche l'index correspondant depuis le tableau des images
    }
 
    const dotsContainerStyle = {
@@ -35,14 +39,11 @@ function Carrousel({ images }) {
    }
 
    const goToSlide = (currentIndex) => {
-      setIndex(currentIndex + 1)
+      setIndex(currentIndex + 1) // permet de se rendre dans un index bien précis du tableau des images
    }
 
    return (
       <div>
-         {/* <div className="test"></div> */}
-         {/* <BulletPoints /> */}
-
          <div className="carrousel_content" style={carrouselStyle}>
             <ArrowIcon
                className="carrousel_previous-arrow"
@@ -84,7 +85,7 @@ function Carrousel({ images }) {
                   return (
                      <div
                         className="carrousel_dots"
-                        key={currentIndex}
+                        key={currentIndex.toString()}
                         style={dotsStyle}
                         onClick={() => goToSlide(currentIndex)} // renvoie au slide correspondant au point sur lequel on clique
                      >
