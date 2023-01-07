@@ -16,13 +16,28 @@ function Home() {
       }
    }, [])
 
-   if (width > breakpoint) {
-      return (
-         <div className="main-wrapper">
+   function responsiveBackground() {
+      if (width > breakpoint) {
+         return (
             <Banner
                text="Chez vous, partout et ailleurs"
                background={DesktopBackground}
             />
+         )
+      } else {
+         return (
+            <Banner
+               text="Chez vous, partout et ailleurs"
+               background={MobileBackground}
+            />
+         )
+      }
+   }
+
+   if (width > breakpoint) {
+      return (
+         <div className="main-wrapper">
+            {responsiveBackground()}
             <div className="home_cards-container">
                <Card />
             </div>
@@ -31,11 +46,7 @@ function Home() {
    } else {
       return (
          <div className="main-wrapper">
-            <p>test</p>
-            <Banner
-               text="Chez vous, partout et ailleurs"
-               background={MobileBackground}
-            />
+            {responsiveBackground()}
             <div className="home_cards-container">
                <Card />
             </div>
