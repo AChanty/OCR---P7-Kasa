@@ -44,8 +44,9 @@ function Logement() {
 
             <div className="rating-host_container">
                <div className="rating_wrapper">
-                  <Rating starType="full" ratingValue={rating} />
-                  <Rating starType="empty" ratingValue={5 - rating} />
+                  {/* <Rating starType="full" ratingValue={rating} />
+                  <Rating starType="empty" ratingValue={5 - rating} /> */}
+                  <Rating rating={rating} />
                </div>
                <div className="host_wrapper">
                   <p className="host_name">{host.name}</p>
