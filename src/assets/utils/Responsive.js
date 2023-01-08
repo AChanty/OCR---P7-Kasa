@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-function ResponsiveRules(breakpoint, contentA, contentB) {
+export default function ResponsiveRules(breakpoint, contentA, contentB) {
    const [width, setWidth] = useState(window.innerWidth)
    //    const breakpoint = 992
    useEffect(() => {
@@ -17,5 +17,3 @@ function ResponsiveRules(breakpoint, contentA, contentB) {
       return contentB
    }
 }
-
-export default ResponsiveRules
