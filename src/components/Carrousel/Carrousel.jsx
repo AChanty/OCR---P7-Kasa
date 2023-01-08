@@ -95,21 +95,6 @@ function Carrousel({ images }) {
                })}
             </div>
          </div>
-
-         {/* <div>
-            <ul>
-               {images.map((images) => {
-                  return (
-                     <img
-                        key={images}
-                        src={images}
-                        className="images_item"
-                        alt=""
-                     />
-                  )
-               })}
-            </ul>
-         </div> */}
       </div>
    )
 }

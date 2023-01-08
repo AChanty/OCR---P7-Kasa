@@ -54,3 +54,23 @@
       grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
    }
 }
+
+.desktopBanner {
+   display: none;
+}
+@media screen and (min-width: 768px) {
+   .mobileBanner {
+      display: none;
+   }
+   .desktopBanner {
+      display: block;
+   }
+}
+@media screen and (min-width: 1300px) {
+   .mobileBanner {
+      display: none;
+   }
+   .desktopBanner {
+      display: block;
+   }
+}
