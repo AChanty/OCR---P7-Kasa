@@ -42,6 +42,26 @@ function Carrousel({ images }) {
       setIndex(currentIndex + 1) // permet de se rendre dans un index bien précis du tableau des images
    }
 
+   function activeBulletColor() {
+      return (
+         <div>
+            <ul style={{ display: 'flex', gap: '5px' }}>
+               {images.map((point, index) => (
+                  <li
+                     onClick={() => goToSlide(index)}
+                     key={index}
+                     className={
+                        index === currentIndex - 1 ? 'active-bullet' : ''
+                     }
+                  >
+                     •
+                  </li>
+               ))}
+            </ul>
+         </div>
+      )
+   }
+
    return (
       <div>
          <div className="carrousel_content" style={carrouselStyle}>
@@ -77,22 +97,37 @@ function Carrousel({ images }) {
                {counter}
             </div>
 
-            <div
+            {/* code fonctionnel pour bulletpoints sans bullet actif */}
+            {/* <div
                className="carrousel_dots-container"
                style={dotsContainerStyle}
             >
                {images.map((images, currentIndex) => {
                   return (
-                     <div
-                        className="carrousel_dots"
-                        key={currentIndex.toString()}
-                        style={dotsStyle}
-                        onClick={() => goToSlide(currentIndex)} // renvoie au slide correspondant au point sur lequel on clique
-                     >
-                        •
-                     </div>
-                  )
+               <div
+                  className="carrousel_dots"
+                  key={currentIndex.toString()}
+                  style={dotsStyle}
+                  onClick={() => goToSlide(currentIndex)} // renvoie au slide correspondant au point sur lequel on clique
+               >
+                  •
+               </div>
+               )
                })}
+            </div> */}
+
+            {/* code pour bullet actif avec problème de navigation*/}
+            <div
+               className="carrousel_dots-container"
+               style={dotsContainerStyle}
+            >
+               <div
+                  className="carrousel_dots"
+                  key={currentIndex.toString()}
+                  style={dotsStyle}
+               >
+                  {activeBulletColor()}
+               </div>
             </div>
          </div>
       </div>
