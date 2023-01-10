@@ -5,6 +5,7 @@
 
    /* height: 255px;
     width: 335px; */
+   overflow: hidden;
 }
 
 /* .card-item:last-child {
@@ -14,10 +15,13 @@
 .card-img {
    border-radius: 10px;
    filter: brightness(50%);
-
    height: 255px;
    width: 335px;
    object-fit: cover;
+}
+.card-img:hover {
+   transform: scale(1.2);
+   transition: 2s ease;
 }
 
 .card-title {

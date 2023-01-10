@@ -35,17 +35,19 @@
       width: 340px;
       height: 340px;
       margin: auto;
+      border-radius: 10px;
 
-      transition: 0.5s;
+      /* transition: 0.5s; */
    }
    .home_cards-container .card-item:hover {
-      transform: scale(1.05);
-      transition: 0.5s;
+      /* transform: scale(1.05); */
+      /* transition: 0.5s; */
    }
    .home_cards-container .card-img {
       margin-top: 0;
       width: 340px;
       height: 340px;
+      transition: 2s ease;
    }
 }
 
