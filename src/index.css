@@ -20,3 +20,18 @@ body {
         transition: .3s;
     }
 }
+
+/* scrollbar chrome */
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #f0f0f0;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: var(--theme-color);
+}
+/* scrollbar firefox */
+:root{
+  scrollbar-color: var(--theme-color) #f0f0f0;
+  scrollbar-width: thin;
+}
