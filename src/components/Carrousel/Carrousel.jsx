@@ -42,29 +42,10 @@ function Carrousel({ images }) {
       setIndex(currentIndex + 1) // permet de se rendre dans un index bien précis du tableau des images
    }
 
-   function activeBulletColor() {
+   function arrowsNavigation() {
+      // mise en place de la navigation par flèches dans le carrousel
       return (
          <div>
-            <ul style={{ display: 'flex', gap: '5px' }}>
-               {images.map((point, index) => (
-                  <li
-                     onClick={() => goToSlide(index)}
-                     key={index}
-                     className={
-                        index === currentIndex - 1 ? 'active-bullet' : ''
-                     }
-                  >
-                     •
-                  </li>
-               ))}
-            </ul>
-         </div>
-      )
-   }
-
-   return (
-      <div>
-         <div className="carrousel_content" style={carrouselStyle}>
             <ArrowIcon
                className="carrousel_previous-arrow"
                fill="white"
@@ -87,48 +68,59 @@ function Carrousel({ images }) {
                }}
                alt="next"
             />
-            <div
-               className="carrousel_counter"
-               style={{
-                  // display: images.length === 1 ? 'none' : 'block',
-                  visibility: images.length === 1 ? 'hidden' : 'visible', // n'affiche pas ce contenu s'il n'y a qu'une image
-               }}
-            >
-               {counter}
-            </div>
+         </div>
+      )
+   }
 
-            {/* code fonctionnel pour bulletpoints sans bullet actif */}
-            {/* <div
-               className="carrousel_dots-container"
-               style={dotsContainerStyle}
-            >
-               {images.map((images, currentIndex) => {
-                  return (
-               <div
-                  className="carrousel_dots"
-                  key={currentIndex.toString()}
-                  style={dotsStyle}
-                  onClick={() => goToSlide(currentIndex)} // renvoie au slide correspondant au point sur lequel on clique
-               >
-                  •
-               </div>
-               )
-               })}
-            </div> */}
+   function displayCounter() {
+      // mise en place du compteur d'images
+      return (
+         <div
+            className="carrousel_counter"
+            style={{
+               // display: images.length === 1 ? 'none' : 'block',
+               visibility: images.length === 1 ? 'hidden' : 'visible', // n'affiche pas ce contenu s'il n'y a qu'une image
+            }}
+         >
+            {counter}
+         </div>
+      )
+   }
 
-            {/* code pour bullet actif avec problème de navigation*/}
+   function bulletsNavigation() {
+      // mise en place de la navigation par points dans le carrousel
+      return (
+         <div className="carrousel_dots-container" style={dotsContainerStyle}>
             <div
-               className="carrousel_dots-container"
-               style={dotsContainerStyle}
+               className="carrousel_dots"
+               key={currentIndex.toString()}
+               style={dotsStyle}
             >
-               <div
-                  className="carrousel_dots"
-                  key={currentIndex.toString()}
-                  style={dotsStyle}
-               >
-                  {activeBulletColor()}
-               </div>
+               <ul style={{ display: 'flex', gap: '5px' }}>
+                  {images.map((point, index) => (
+                     <li
+                        onClick={() => goToSlide(index)}
+                        key={index}
+                        className={
+                           // ajoute une classe à la bullet active pour pouvoir y ajouter du css
+                           index === currentIndex - 1 ? 'active-bullet' : ''
+                        }
+                     >
+                        •
+                     </li>
+                  ))}
+               </ul>
             </div>
+         </div>
+      )
+   }
+
+   return (
+      <div>
+         <div className="carrousel_content" style={carrouselStyle}>
+            {arrowsNavigation()}
+            {displayCounter()}
+            {bulletsNavigation()}
          </div>
       </div>
    )
