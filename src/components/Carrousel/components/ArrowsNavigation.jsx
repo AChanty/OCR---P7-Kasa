@@ -19,7 +19,9 @@ function ArrowsNavigation({ count, position, action }) {
                         transform: 'rotate(-90deg)',
                         top: '50%',
                      }}
-                     alt="previous"
+                     // permet de lire la valeur de 'action' contenue dans le parent, pour pouvoir assigner une valeur pour 'alt'
+                     data-action={action.name}
+                     alt={action.name === 'removeCounter' ? 'Previous' : 'Next'}
                   />
                </div>
             )
@@ -35,7 +37,8 @@ function ArrowsNavigation({ count, position, action }) {
                         right: '0',
                         top: '50%',
                      }}
-                     alt="next"
+                     data-action={action.name}
+                     alt={action.name === 'removeCounter' ? 'Previous' : 'Next'}
                   />
                </div>
             )
@@ -51,7 +54,8 @@ function ArrowsNavigation({ count, position, action }) {
                         left: '50%',
                         transform: 'translate(-50%, 0)',
                      }}
-                     alt="previous"
+                     data-action={action.name}
+                     alt={action.name === 'removeCounter' ? 'Previous' : 'Next'}
                   />
                </div>
             )
@@ -67,7 +71,8 @@ function ArrowsNavigation({ count, position, action }) {
                         left: '50%',
                         transform: 'translate(-50%, 0) rotate(180deg)',
                      }}
-                     alt="next"
+                     data-action={action.name}
+                     alt={action.name === 'removeCounter' ? 'Previous' : 'Next'}
                   />
                </div>
             )
@@ -83,7 +88,8 @@ function ArrowsNavigation({ count, position, action }) {
                         transform: 'rotate(-90deg)',
                         top: '50%',
                      }}
-                     alt="previous"
+                     data-action={action.name}
+                     alt={action.name === 'removeCounter' ? 'Previous' : 'Next'}
                   />
                </div>
             )
