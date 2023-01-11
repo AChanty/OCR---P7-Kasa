@@ -15,11 +15,13 @@ function Card() {
                   key={logement.id}
                >
                   <p className="card-title">{logement.title}</p>
-                  <img
-                     className="card-img"
-                     src={logement.cover}
-                     alt={logement.title}
-                  />
+                  <div className="card-item_img-container">
+                     <img
+                        className="card-img"
+                        src={logement.cover}
+                        alt={logement.title}
+                     />
+                  </div>
                </Link>
             )
          )}

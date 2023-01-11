@@ -4,6 +4,7 @@
 
 .home_cards-container .card-item {
    margin-top: 20px;
+   border-radius: 10px;
 }
 
 .home_cards-container .card-container {
@@ -47,7 +48,7 @@
       margin-top: 0;
       width: 340px;
       height: 340px;
-      transition: 2s ease;
+      /* transition: 2s ease; */
    }
 }
 
