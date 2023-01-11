@@ -7,34 +7,6 @@ import Card from '../../components/Card/Card'
 import ResponsiveRules from '../../../src/assets/utils/Responsive'
 
 function Home() {
-   // const [width, setWidth] = useState(window.innerWidth)
-   // const breakpoint = 992
-   // useEffect(() => {
-   //    const handleResizeWindow = () => setWidth(window.innerWidth)
-   //    window.addEventListener('resize', handleResizeWindow)
-   //    return () => {
-   //       window.removeEventListener('resize', handleResizeWindow)
-   //    }
-   // }, [])
-
-   // function responsiveBackground() {
-   //    if (width > breakpoint) {
-   //       return (
-   //          <Banner
-   //             text="Chez vous, partout et ailleurs"
-   //             background={DesktopBackground}
-   //          />
-   //       )
-   //    } else {
-   //       return (
-   //          <Banner
-   //             text="Chez vous, partout et ailleurs"
-   //             background={MobileBackground}
-   //          />
-   //       )
-   //    }
-   // }
-
    return (
       <div className="main-wrapper">
          {ResponsiveRules(
