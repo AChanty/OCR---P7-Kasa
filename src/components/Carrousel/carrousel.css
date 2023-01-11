@@ -4,6 +4,8 @@
    height: 255px;
    border-radius: 10px;
 
+   /* background-size: cover;
+   background-position: bottom; */
    position: relative;
 }
 
@@ -18,18 +20,10 @@
    transform: translate(-50%, 0);
 }
 
-.carrousel_previous-arrow {
-   top: 50%;
-}
-.carrousel_next-arrow {
-   right: 0;
-}
-
-.carrousel_previous-arrow,
-.carrousel_next-arrow {
+.carrousel-arrow {
    user-select: none;
    cursor: pointer;
-   top: 50%;
+   /* top: 50%; */
    position: absolute;
    width: 20px;
    height: 12px;
@@ -51,14 +45,12 @@
    .carrousel_content {
       height: 415px;
    }
-   .carrousel_previous-arrow,
-   .carrousel_next-arrow {
+   .carrousel-arrow {
       width: 80px;
       height: 46px;
       transition: 0.2s;
    }
-   .carrousel_previous-arrow:hover,
-   .carrousel_next-arrow:hover {
+   .carrousel-arrow:hover {
       height: 50px;
       width: 84px;
       transition: 0.2s;

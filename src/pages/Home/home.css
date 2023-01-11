@@ -57,7 +57,7 @@
    }
 }
 
-.desktopBanner {
+/* .desktopBanner {
    display: none;
 }
 @media screen and (min-width: 768px) {
@@ -75,4 +75,4 @@
    .desktopBanner {
       display: block;
    }
-}
+} */

@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react'
 
+// ajouter debounce
 export default function ResponsiveRules(breakpoint, contentA, contentB) {
    const [width, setWidth] = useState(window.innerWidth)
-   //    const breakpoint = 992
    useEffect(() => {
       const handleResizeWindow = () => setWidth(window.innerWidth)
       window.addEventListener('resize', handleResizeWindow)
