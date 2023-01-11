@@ -37,9 +37,9 @@
    transform: translate(-50%, 0);
 }
 
-.carrousel_counter {
+/* .carrousel_counter {
    display: none;
-}
+} */
 
 @media screen and (min-width: 992px) {
    .carrousel_content {
@@ -56,12 +56,12 @@
       transition: 0.2s;
    }
    .carrousel_counter {
-      display: block;
+      /* display: block; */
       font-size: 18px;
    }
-   .carrousel_dots {
+   /* .carrousel_dots {
       display: none;
-   }
+   } */
 }
 
 .active-bullet {

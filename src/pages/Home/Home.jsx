@@ -24,26 +24,6 @@ function Home() {
             <Card />
          </div>
       </div>
-
-      // <div className="main-wrapper">
-      //    <div className="desktopBanner">
-      //       <Banner
-      //          text="Chez vous, partout et ailleurs"
-      //          background={DesktopBackground}
-      //       />
-      //    </div>
-
-      //    <div className="mobileBanner">
-      //       <Banner
-      //          text="Chez vous, partout et ailleurs"
-      //          background={MobileBackground}
-      //       />
-      //    </div>
-
-      //    <div className="home_cards-container">
-      //       <Card />
-      //    </div>
-      // </div>
    )
 }
 
