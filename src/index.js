@@ -19,10 +19,11 @@ root.render(
          <ScrollToTop />
          <Header />
          <Routes>
-            <Route path="*" element={<NotFound />}></Route>
+            <Route path="*" element={<Navigate to="/404" />}></Route>
             <Route index element={<Home />}></Route>
             <Route path="/about" element={<About />}></Route>
             <Route path="/logement/:id" element={<Logement />}></Route>
+            <Route path="/404" element={<NotFound />}></Route>
          </Routes>
          <Footer />
       </BrowserRouter>

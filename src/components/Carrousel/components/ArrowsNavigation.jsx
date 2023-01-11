@@ -77,6 +77,22 @@ function ArrowsNavigation({ removeCounter, addCounter, count, position }) {
          )
 
       default:
+         return (
+            <div>
+               <ArrowIcon
+                  className="carrousel-arrow"
+                  fill="white"
+                  onClick={removeCounter}
+                  style={{
+                     // display: images.length === 1 ? 'none' : 'block', // n'affiche pas ce contenu s'il n'y a qu'une image
+                     visibility: count === 1 ? 'hidden' : 'visible', // n'affiche pas ce contenu s'il n'y a qu'une image
+                     transform: 'rotate(-90deg)',
+                     top: '50%',
+                  }}
+                  alt="previous"
+               />
+            </div>
+         )
    }
 
    //    return (
