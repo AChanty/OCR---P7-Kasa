@@ -15,7 +15,7 @@ export default function ResponsiveRules(breakpoint, contentA, contentB) {
    const [width, setWidth] = useState(window.innerWidth)
    useEffect(() => {
       const debouncedHandleResizeWindow = debounce(() => {
-         console.log('test')
+         console.log('debounce trigger')
          setWidth(window.innerWidth)
       })
 
@@ -25,6 +25,7 @@ export default function ResponsiveRules(breakpoint, contentA, contentB) {
       }
    }, [])
 
+   // si la taille de l'écran (width) est supérieure au breakpoint, affiche 'contentA', sinon affiche 'contentB'
    if (width > breakpoint) {
       return contentA
    } else {
