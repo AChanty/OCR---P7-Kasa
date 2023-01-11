@@ -1,18 +1,14 @@
 function Counter({ count, currentIndex }) {
+   // mise en place du compteur d'images
+
    const counter = currentIndex + '/' + count
 
-   // mise en place du compteur d'images
-   return (
-      <div
-         className="carrousel_counter"
-         style={{
-            // display: images.length === 1 ? 'none' : 'block',
-            visibility: count === 1 ? 'hidden' : 'visible', // n'affiche pas ce contenu s'il n'y a qu'une image
-         }}
-      >
-         {counter}
-      </div>
-   )
+   // n'affiche pas le compteur s'il n'y a qu'une image
+   if (count === 1) {
+      return null
+   } else {
+      return <div className="carrousel_counter">{counter}</div>
+   }
 }
 
 export default Counter

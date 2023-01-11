@@ -33,14 +33,12 @@ function Carrousel({ images }) {
          <div className="carrousel_content" style={carrouselStyle}>
             <ArrowsNavigation
                count={images.length}
-               removeCounter={removeCounter}
-               addCounter={addCounter}
+               action={removeCounter}
                position={'left'}
             />
             <ArrowsNavigation
                count={images.length}
-               removeCounter={removeCounter}
-               addCounter={addCounter}
+               action={addCounter}
                position={'right'}
             />
             {/* <Counter count={images.length} currentIndex={currentIndex} />

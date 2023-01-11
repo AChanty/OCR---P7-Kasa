@@ -37,10 +37,6 @@
    transform: translate(-50%, 0);
 }
 
-/* .carrousel_counter {
-   display: none;
-} */
-
 @media screen and (min-width: 992px) {
    .carrousel_content {
       height: 415px;
@@ -56,12 +52,8 @@
       transition: 0.2s;
    }
    .carrousel_counter {
-      /* display: block; */
       font-size: 18px;
    }
-   /* .carrousel_dots {
-      display: none;
-   } */
 }
 
 .active-bullet {
