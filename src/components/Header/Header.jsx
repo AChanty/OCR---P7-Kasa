@@ -10,16 +10,20 @@ function Header() {
                <img className="header_logo" src={logo} alt="logo Kanap" />
             </NavLink>
          </div>
-         <div className="menu_links">
+         <nav className="header_nav">
             <ul>
                <li>
-                  <NavLink to="/">Accueil</NavLink>
+                  <NavLink to="/" className="header_nav-link">
+                     Accueil
+                  </NavLink>
                </li>
                <li>
-                  <NavLink to="/about">À propos</NavLink>
+                  <NavLink to="/about" className="header_nav-link">
+                     À propos
+                  </NavLink>
                </li>
             </ul>
-         </div>
+         </nav>
       </header>
    )
 }
