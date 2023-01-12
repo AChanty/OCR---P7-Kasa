@@ -19,8 +19,6 @@ function ArrowsNavigation({ count, position, action }) {
                         transform: 'rotate(-90deg)',
                         top: '50%',
                      }}
-                     // permet de lire la valeur de 'action' contenue dans le parent, pour pouvoir assigner une valeur pour 'alt'
-                     data-action={action.name}
                      alt={action.name === 'removeCounter' ? 'Previous' : 'Next'}
                   />
                </div>
@@ -37,7 +35,6 @@ function ArrowsNavigation({ count, position, action }) {
                         right: '0',
                         top: '50%',
                      }}
-                     data-action={action.name}
                      alt={action.name === 'removeCounter' ? 'Previous' : 'Next'}
                   />
                </div>
@@ -54,7 +51,6 @@ function ArrowsNavigation({ count, position, action }) {
                         left: '50%',
                         transform: 'translate(-50%, 0)',
                      }}
-                     data-action={action.name}
                      alt={action.name === 'removeCounter' ? 'Previous' : 'Next'}
                   />
                </div>
@@ -71,7 +67,6 @@ function ArrowsNavigation({ count, position, action }) {
                         left: '50%',
                         transform: 'translate(-50%, 0) rotate(180deg)',
                      }}
-                     data-action={action.name}
                      alt={action.name === 'removeCounter' ? 'Previous' : 'Next'}
                   />
                </div>
@@ -88,7 +83,6 @@ function ArrowsNavigation({ count, position, action }) {
                         transform: 'rotate(-90deg)',
                         top: '50%',
                      }}
-                     data-action={action.name}
                      alt={action.name === 'removeCounter' ? 'Previous' : 'Next'}
                   />
                </div>
