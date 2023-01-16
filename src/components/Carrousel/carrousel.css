@@ -3,9 +3,6 @@
    width: 100%;
    height: 255px;
    border-radius: 10px;
-
-   /* background-size: cover;
-   background-position: bottom; */
    position: relative;
 }
 
@@ -15,15 +12,13 @@
    position: absolute;
    font-size: 14px;
    bottom: 6%;
-   /* permet de centrer l'élément absolute */
    left: 50%;
-   transform: translate(-50%, 0);
+   transform: translate(-50%, 0); /* permet de centrer l'élément absolute */
 }
 
 .carrousel-arrow {
    user-select: none;
    cursor: pointer;
-   /* top: 50%; */
    position: absolute;
    width: 20px;
    height: 12px;
@@ -32,9 +27,8 @@
 .carrousel_dots-container {
    position: absolute;
    bottom: 6%;
-   /* permet de centrer l'élément absolute */
    left: 50%;
-   transform: translate(-50%, 0);
+   transform: translate(-50%, 0); /* permet de centrer l'élément absolute */
 }
 
 @media screen and (min-width: 992px) {

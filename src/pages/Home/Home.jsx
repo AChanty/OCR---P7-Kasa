@@ -10,7 +10,7 @@ function Home() {
    return (
       <div className="main-wrapper">
          {ResponsiveRules(
-            992, // change l'image de fond lorsque l'écran est supérieur à 992px
+            992, // change l'image de fond lorsque l'écran est inférieur/supérieur à 992px
             <Banner
                text="Chez vous, partout et ailleurs"
                background={DesktopBackground}

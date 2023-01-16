@@ -41,12 +41,6 @@ function Carrousel({ images }) {
                action={addCounter}
                position={'right'}
             />
-            {/* <Counter count={images.length} currentIndex={currentIndex} />
-            <BulletsNavigation
-               count={images.length}
-               currentIndex={currentIndex}
-               goToSlide={goToSlide}
-            /> */}
             {ResponsiveRules(
                992, // passe du compteur numérique aux bullets lorsque l'écran est inférieur à 992px
                <Counter count={images.length} currentIndex={currentIndex} />,
