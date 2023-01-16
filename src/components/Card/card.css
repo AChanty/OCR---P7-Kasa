@@ -4,7 +4,7 @@
    position: relative;
    border-radius: 10px;
 
-   width: 335px;
+   max-width: 335px;
    overflow: hidden;
    display: flex;
 }
@@ -54,7 +54,7 @@
    }
    .card-item {
       margin-top: 0;
-      width: 340px;
+      min-width: 340px;
       height: 340px;
       margin: auto;
       border-radius: 10px;
