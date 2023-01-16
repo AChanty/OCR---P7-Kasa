@@ -34,12 +34,13 @@
 import { Link } from 'react-router-dom'
 import './card.css'
 
-function Card({ id, title, cover }) {
+function Card({ link, id, title, cover }) {
    return (
       <Link
-         to={`/logement/${id}`} // le lien dirige vers logement/:logement.id
+         // to={`/logement/${id}`} // le lien dirige vers logement/:logement.id
+         to={link} // le lien dirige vers logement/:logement.id
          className="card-item"
-         key={id}
+         // key={id}
       >
          <p className="card-title">{title}</p>
          <div className="card-item_img-container">

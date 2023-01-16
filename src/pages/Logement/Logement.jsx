@@ -5,7 +5,6 @@ import Tag from './../../components/Tag/Tag.jsx'
 import Rating from './../../components/Rating/Rating.jsx'
 import Collapse from './../../components/Collapse/Collapse.jsx'
 import Carrousel from './../../components/Carrousel/Carrousel.jsx'
-import Card from '../../components/Card/Card'
 
 function Logement() {
    const { id } = useParams() // utilise l'id de l'url
@@ -28,13 +27,11 @@ function Logement() {
       host,
       description,
       equipments,
-      cover,
    } = logement
 
    return (
       <div className="main-wrapper">
          <Carrousel images={pictures} />
-         <Card id={id} title={title} cover={cover} />
          <div className="logement_infos-wrapper">
             <div className="logement_title-location-tags-container">
                <h1 className="logement_title">{title}</h1>

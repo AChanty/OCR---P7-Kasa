@@ -53,11 +53,11 @@ function Home() {
          <div className="home_cards-container">
             <div className="card-container">
                {Logements.map(
-                  (
-                     logement // créé un div.card-item pour chaque objet disponible dans logement.json
-                  ) => (
+                  // créé un div.card-item pour chaque objet disponible dans logement.json
+                  (logement, index) => (
                      <Card
-                        id={logement.id}
+                        link={`/logement/${logement.id}`}
+                        key={index}
                         title={logement.title}
                         cover={logement.cover}
                      />
