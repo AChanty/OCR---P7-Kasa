@@ -1,7 +1,7 @@
 import './logement.css'
 import Logements from './../../assets/datas/logements.json'
 import { Navigate, useParams } from 'react-router-dom'
-import Tag from './../../components/Tag/Tag.jsx'
+import Tags from '../../components/Tags/Tags.jsx'
 import Rating from './../../components/Rating/Rating.jsx'
 import Collapse from './../../components/Collapse/Collapse.jsx'
 import Carrousel from './../../components/Carrousel/Carrousel.jsx'
@@ -38,7 +38,7 @@ function Logement() {
                <p className="logement_location">{location}</p>
 
                <div className="logement_tags-container">
-                  <Tag tags={tags} />
+                  <Tags tags={tags} />
                </div>
             </div>
 

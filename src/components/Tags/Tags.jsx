@@ -1,6 +1,6 @@
-import './tag.css'
+import './tags.css'
 
-function Tag({ tags }) {
+function Tags({ tags }) {
    return (
       <ul className="tags_container">
          {tags.map((tags) => {
@@ -15,4 +15,4 @@ function Tag({ tags }) {
    )
 }
 
-export default Tag
+export default Tags
