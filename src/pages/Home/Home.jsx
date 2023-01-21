@@ -90,13 +90,12 @@ function Home() {
                />
             }
          />
-
-         <div className="home_cards-container">
-            <div className="card-container">
-               {isDataLoading ? ( // affiche la barre de chargement pendant le fetching
-                  <Loading />
-               ) : (
-                  <>
+         {isDataLoading ? ( // affiche la barre de chargement pendant le fetching
+            <Loading />
+         ) : (
+            <>
+               <div className="home_cards-container">
+                  <div className="card-container">
                      {logementsDatas.map(
                         // créé un div.card-item pour chaque objet disponible dans logement.json
                         (logement, index) => (
@@ -108,10 +107,10 @@ function Home() {
                            />
                         )
                      )}
-                  </>
-               )}
-            </div>
-         </div>
+                  </div>
+               </div>
+            </>
+         )}
       </div>
    )
 }

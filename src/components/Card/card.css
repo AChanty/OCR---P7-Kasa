@@ -3,6 +3,7 @@
    font-size: 18px;
    position: relative;
    border-radius: 10px;
+   user-select: none;
 
    max-width: 335px;
    overflow: hidden;

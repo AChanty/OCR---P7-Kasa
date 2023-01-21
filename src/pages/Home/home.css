@@ -9,6 +9,11 @@
 }
 
 @media screen and (min-width: 768px) {
+   .home_cards-container {
+      background-color: #f7f7f7;
+      border-radius: 25px;
+   }
+
    .home_cards-container .card-container {
       display: grid;
       gap: 60px;
@@ -16,8 +21,8 @@
 
       margin-top: 43px;
       padding: 56px 50px;
-      background-color: #f7f7f7;
-      border-radius: 25px;
+      /* background-color: #f7f7f7; */
+      /* border-radius: 25px; */
    }
 }
 

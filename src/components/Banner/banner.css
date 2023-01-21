@@ -1,5 +1,6 @@
 .banner_container {
    position: relative;
+   user-select: none;
 }
 
 .banner_container img {
