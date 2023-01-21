@@ -4,6 +4,7 @@ import BulletsNavigation from './components/BulletNavigation'
 import ArrowsNavigation from './components/ArrowsNavigation'
 import Counter from './components/Counter'
 import ResponsiveRules from '../../assets/utils/ResponsiveRules'
+import ResponsiveWrapper from '../../assets/utils/ResponsiveWrapper'
 
 function Carrousel({ images }) {
    let [currentIndex, setIndex] = useState(1)
@@ -41,7 +42,7 @@ function Carrousel({ images }) {
                action={addCounter}
                position={'right'}
             />
-            {ResponsiveRules(
+            {/* {ResponsiveRules(
                992, // passe du compteur numérique aux bullets lorsque l'écran est inférieur à 992px
                <Counter count={images.length} currentIndex={currentIndex} />,
                <BulletsNavigation
@@ -49,7 +50,21 @@ function Carrousel({ images }) {
                   currentIndex={currentIndex}
                   goToSlide={goToSlide}
                />
-            )}
+            )} */}
+            <ResponsiveWrapper
+               // passe du compteur numérique aux bullets lorsque l'écran est inférieur à 992px
+               breakpoint={992}
+               contentA={
+                  <Counter count={images.length} currentIndex={currentIndex} />
+               }
+               contentB={
+                  <BulletsNavigation
+                     count={images.length}
+                     currentIndex={currentIndex}
+                     goToSlide={goToSlide}
+                  />
+               }
+            />
          </div>
       </div>
    )
