@@ -2,7 +2,8 @@ import './about.css'
 import Collapse from './../../components/Collapse/Collapse.jsx'
 import Image from './../../assets/img/about-background.jpg'
 import MobileImage from './../../assets/img/about-responsive-background.png'
-import ResponsiveRules from '../../../src/assets/utils/Responsive'
+// import ResponsiveRules from '../../assets/utils/ResponsiveRules'
+import ResponsiveWrapper from '../../assets/utils/ResponsiveWrapper'
 
 const aboutContent = [
    {
@@ -26,11 +27,19 @@ const aboutContent = [
 function About() {
    return (
       <div className="main-wrapper">
-         {ResponsiveRules(
+         <ResponsiveWrapper
+            // affiche un contenu différent en fonction de la taille de l'écran
+            breakpoint={992}
+            contentA={
+               <img className="about_image" src={MobileImage} alt="about" />
+            }
+            contentB={<img className="about_image" src={Image} alt="about" />}
+         />
+         {/* {ResponsiveRules(
             992, // change l'image lorsque l'écran est inférieur/supérieur à 992px
             <img className="about_image" src={MobileImage} alt="about" />,
             <img className="about_image" src={Image} alt="about" />
-         )}
+         )} */}
          <div className="about_collapses-wrapper">
             {/* parcourt le tableau "aboutContent" pour créer un élément "Collapse" pour chaque entrée présente */}
             {aboutContent.map((aboutContent, index) => (

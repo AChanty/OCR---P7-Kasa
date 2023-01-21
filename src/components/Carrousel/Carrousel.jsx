@@ -3,7 +3,7 @@ import { useState } from 'react'
 import BulletsNavigation from './components/BulletNavigation'
 import ArrowsNavigation from './components/ArrowsNavigation'
 import Counter from './components/Counter'
-import ResponsiveRules from '../../../src/assets/utils/Responsive'
+import ResponsiveRules from '../../assets/utils/ResponsiveRules'
 
 function Carrousel({ images }) {
    let [currentIndex, setIndex] = useState(1)
