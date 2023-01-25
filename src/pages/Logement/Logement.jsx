@@ -96,7 +96,9 @@ import Loading from '../../components/Loading/Loading'
 function Logement() {
    const [isDataLoading, setDataLoading] = useState(false) // statut de la barre de chargement
    const [logementData, setLogementData] = useState() // statut de la réponse du fetch
+   // const [logementData, setLogementData] = useState([]) // statut de la réponse du fetch
    const [notFound, setNotFound] = useState(false)
+   const [errorState, setError] = useState(false)
 
    const { id } = useParams()
 
@@ -117,14 +119,22 @@ function Logement() {
             }
             setDataLoading(false) // désactive l'état de barre de chargement
          })
-         .catch((error) => console.log(error))
+         .catch((error) => {
+            console.log(error)
+            setError(true)
+            setDataLoading(false)
+         })
    }, [id])
 
    if (notFound) {
       // si l'id n'est pas trouvé, redirige vers la page 404
       return <Navigate to="/404" />
    }
+   if (errorState) {
+      return <p>Erreur lors de la récupération des données</p>
+   }
    if (!logementData) {
+      // if (isDataLoading) {
       // affiche la barre de chargement tant que logementData n'a pas reçu les données
       return <Loading />
    }

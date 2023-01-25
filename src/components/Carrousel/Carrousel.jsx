@@ -3,7 +3,7 @@ import { useState } from 'react'
 import BulletsNavigation from './components/BulletNavigation'
 import ArrowsNavigation from './components/ArrowsNavigation'
 import Counter from './components/Counter'
-import ResponsiveRules from '../../assets/utils/ResponsiveRules'
+// import ResponsiveRules from '../../assets/utils/ResponsiveRules'
 import ResponsiveWrapper from '../../assets/utils/ResponsiveWrapper'
 
 function Carrousel({ images }) {

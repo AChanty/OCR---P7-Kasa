@@ -53,7 +53,8 @@ import ResponsiveWrapper from '../../assets/utils/ResponsiveWrapper'
 
 function Home() {
    const [isDataLoading, setDataLoading] = useState(false)
-   const [logementsDatas, setLogementsDatas] = useState()
+   const [logementsDatas, setLogementsDatas] = useState([])
+   const [errorState, setError] = useState(false)
 
    useEffect(() => {
       setDataLoading(true) // active l'état de barre de chargement
@@ -62,12 +63,18 @@ function Home() {
          .then((data) => {
             setLogementsDatas(data)
             setDataLoading(false) // désactive l'état de barre de chargement
-            console.log(data)
          })
-         .catch((error) => console.log(error))
+         .catch((error) => {
+            console.log(error)
+            setError(true)
+            setDataLoading(false)
+         })
    }, [])
 
-   if (!logementsDatas) {
+   if (errorState) {
+      return <p>Erreur lors de la récupération des données</p>
+   }
+   if (isDataLoading) {
       // affiche la barre de chargement tant que logementsDatas n'a pas reçu les données
       return <Loading />
    }
