@@ -41,43 +41,106 @@
 
 // export default Home
 
+//////////////////////////////////
+
+// import './home.css'
+// import Banner from '../../components/Banner/Banner'
+// import MobileBackground from './../../assets/img/banner.png'
+// import DesktopBackground from './../../assets/img/desktop-banner.png'
+// import Card from '../../components/Card/Card'
+// // import ResponsiveRules from '../../assets/utils/ResponsiveRules'
+// import Loading from '../../components/Loading/Loading'
+// import { useState, useEffect } from 'react'
+// import ResponsiveWrapper from '../../assets/utils/ResponsiveWrapper'
+
+// function Home() {
+//    const [isDataLoading, setDataLoading] = useState(false)
+//    const [logementsDatas, setLogementsDatas] = useState([])
+//    const [errorState, setError] = useState(false)
+
+//    useEffect(() => {
+//       setDataLoading(true) // active l'état de barre de chargement
+//       fetch(`/logements.json`)
+//          .then((response) => response.json())
+//          .then((data) => {
+//             setLogementsDatas(data)
+//             setDataLoading(false) // désactive l'état de barre de chargement
+//          })
+//          .catch((error) => {
+//             console.log(error)
+//             setError(true)
+//             setDataLoading(false)
+//          })
+//    }, [])
+
+//    if (errorState) {
+//       return <p>Erreur lors de la récupération des données</p>
+//    }
+//    if (isDataLoading) {
+//       // affiche la barre de chargement tant que logementsDatas n'a pas reçu les données
+//       return <Loading />
+//    }
+
+//    return (
+//       <div className="main-wrapper">
+//          <ResponsiveWrapper
+//             // affiche un contenu différent en fonction de la taille de l'écran
+//             breakpoint={992}
+//             contentA={
+//                <Banner
+//                   text="Chez vous, partout et ailleurs"
+//                   background={DesktopBackground}
+//                />
+//             }
+//             contentB={
+//                <Banner
+//                   text="Chez vous, partout et ailleurs"
+//                   background={MobileBackground}
+//                />
+//             }
+//          />
+//          {isDataLoading ? ( // affiche la barre de chargement pendant le fetching
+//             <Loading />
+//          ) : (
+//             <>
+//                <div className="home_cards-container">
+//                   <div className="card-container">
+//                      {logementsDatas.map(
+//                         // créé un div.card-item pour chaque objet disponible dans logement.json
+//                         (logement, index) => (
+//                            <Card
+//                               link={`/logement/${logement.id}`}
+//                               key={index}
+//                               title={logement.title}
+//                               cover={logement.cover}
+//                            />
+//                         )
+//                      )}
+//                   </div>
+//                </div>
+//             </>
+//          )}
+//       </div>
+//    )
+// }
+
+// export default Home
+
+//////////////////////////////////
+
+import React, { useContext } from 'react'
 import './home.css'
 import Banner from '../../components/Banner/Banner'
 import MobileBackground from './../../assets/img/banner.png'
 import DesktopBackground from './../../assets/img/desktop-banner.png'
 import Card from '../../components/Card/Card'
-// import ResponsiveRules from '../../assets/utils/ResponsiveRules'
 import Loading from '../../components/Loading/Loading'
-import { useState, useEffect } from 'react'
 import ResponsiveWrapper from '../../assets/utils/ResponsiveWrapper'
+import { LogementsContext } from './../../App.jsx'
 
 function Home() {
-   const [isDataLoading, setDataLoading] = useState(false)
-   const [logementsDatas, setLogementsDatas] = useState([])
-   const [errorState, setError] = useState(false)
-
-   useEffect(() => {
-      setDataLoading(true) // active l'état de barre de chargement
-      fetch(`/logements.json`)
-         .then((response) => response.json())
-         .then((data) => {
-            setLogementsDatas(data)
-            setDataLoading(false) // désactive l'état de barre de chargement
-         })
-         .catch((error) => {
-            console.log(error)
-            setError(true)
-            setDataLoading(false)
-         })
-   }, [])
-
-   if (errorState) {
-      return <p>Erreur lors de la récupération des données</p>
-   }
-   if (isDataLoading) {
-      // affiche la barre de chargement tant que logementsDatas n'a pas reçu les données
-      return <Loading />
-   }
+   // utilisation des states tirés du contexte de App.jsx
+   const { logements, isDataLoading, errorState } = useContext(LogementsContext)
 
    return (
       <div className="main-wrapper">
@@ -102,19 +165,24 @@ function Home() {
          ) : (
             <>
                <div className="home_cards-container">
-                  <div className="card-container">
-                     {logementsDatas.map(
-                        // créé un div.card-item pour chaque objet disponible dans logement.json
-                        (logement, index) => (
-                           <Card
-                              link={`/logement/${logement.id}`}
-                              key={index}
-                              title={logement.title}
-                              cover={logement.cover}
-                           />
-                        )
-                     )}
-                  </div>
+                  {errorState && ( // affiche une erreur si errorState est true
+                     <p>Erreur lors de la récupération des données</p>
+                  )}
+                  {logements && (
+                     <div className="card-container">
+                        {logements.map(
+                           // créé un composant Card pour chaque objet disponible dans logement.json
+                           (logement, index) => (
+                              <Card
+                                 link={`/logement/${logement.id}`}
+                                 key={index}
+                                 title={logement.title}
+                                 cover={logement.cover}
+                              />
+                           )
+                        )}
+                     </div>
+                  )}
                </div>
             </>
          )}

@@ -7,18 +7,18 @@ function Collapse({ headerName, content }) {
 
    return isOpen ? ( // si le composant est ouvert, affiche le contenu qui contient les informations relatives à l'onglet ouvert
       <div className="collapse_item">
-         <div className="collapse_head" onClick={() => isClosed(false)}>
+         <button className="collapse_head" onClick={() => isClosed(false)}>
             <h3>{headerName}</h3>
             <ArrowIcon className="collapse_head-closed" fill="white" />
-         </div>
+         </button>
          <div className="collapse_content">{content}</div>
       </div>
    ) : (
       <div className="collapse_item">
-         <div className="collapse_head" onClick={() => isClosed(true)}>
+         <button className="collapse_head" onClick={() => isClosed(true)}>
             <h3>{headerName}</h3>
             <ArrowIcon className="collapse_head-opened" fill="white" />
-         </div>
+         </button>
 
          {/* change la classe de collapse_content pour pouvoir gérer les animations */}
          <div className="collapse_content-closed"></div>

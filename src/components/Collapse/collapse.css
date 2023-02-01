@@ -7,6 +7,9 @@
 }
 
 .collapse_head {
+   width: 100%;
+   border: 0;
+
    background-color: var(--theme-color);
    color: var(--text-color);
    cursor: pointer;
@@ -22,6 +25,7 @@
 }
 
 .collapse_head h3 {
+   font-family: 'Montserrat', sans-serif;
    font-size: 13px;
    line-height: 1.4em;
 }
