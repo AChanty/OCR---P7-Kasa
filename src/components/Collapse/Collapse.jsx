@@ -20,7 +20,7 @@ function Collapse({ headerName, content }) {
             <ArrowIcon className="collapse_head-opened" fill="white" />
          </button>
 
-         {/* change la classe de collapse_content pour pouvoir gérer les animations */}
+         {/* change la classe de collapse_content pour pouvoir gérer l'animation de transition */}
          <div className="collapse_content-closed"></div>
       </div>
    )

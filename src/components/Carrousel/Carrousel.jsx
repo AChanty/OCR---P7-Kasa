@@ -3,7 +3,6 @@ import { useState } from 'react'
 import BulletsNavigation from './components/BulletNavigation'
 import ArrowsNavigation from './components/ArrowsNavigation'
 import Counter from './components/Counter'
-// import ResponsiveRules from '../../assets/utils/ResponsiveRules'
 import ResponsiveWrapper from '../../assets/utils/ResponsiveWrapper'
 
 function Carrousel({ images }) {
@@ -42,15 +41,6 @@ function Carrousel({ images }) {
                action={addCounter}
                position={'right'}
             />
-            {/* {ResponsiveRules(
-               992, // passe du compteur numérique aux bullets lorsque l'écran est inférieur à 992px
-               <Counter count={images.length} currentIndex={currentIndex} />,
-               <BulletsNavigation
-                  count={images.length}
-                  currentIndex={currentIndex}
-                  goToSlide={goToSlide}
-               />
-            )} */}
             <ResponsiveWrapper
                // passe du compteur numérique aux bullets lorsque l'écran est inférieur à 992px
                breakpoint={992}

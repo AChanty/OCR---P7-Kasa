@@ -16,7 +16,7 @@ function Rating({ rating }) {
       // la valeur key est modifiée pour éviter des doublons après avoir mergé les tableaux
    }
 
-   // merge les deux tableaux pour avoir 5 étoiles
+   // merge les deux tableaux pour avoir un total de 5 étoiles
    const totalStars = fullStars.concat(emptyStars)
 
    return (

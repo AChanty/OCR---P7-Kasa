@@ -1,11 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import {
-   BrowserRouter,
-   Routes,
-   Route,
-   Navigate,
-   // ScrollRestoration,
-} from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import './index.css'
 
 import Header from './components/Header/Header.jsx'
@@ -16,12 +10,10 @@ import NotFound from './pages/404/404.jsx'
 import Logement from './pages/Logement/Logement.jsx'
 import BackToTop from './assets/utils/BackToTop'
 
-// création du contexte logements, permettant de ne fetch logement.json
-// qu'une seule fois pour toute l'application
+// création du contexte logements, permettant de ne fetch logement.json qu'une seule fois pour toute l'application
 const LogementsContext = React.createContext(null)
 
 export default function App() {
-   // stockage des logements tirés du fetching de logements.json
    const [logements, setLogements] = useState([])
    const [isDataLoading, setDataLoading] = useState(true)
    const [errorState, setError] = useState(false)
@@ -49,6 +41,8 @@ export default function App() {
 
    return (
       <React.StrictMode>
+         {/* mise en place du provider du contexte LogementsContext,
+         avec les states que l'on va utiliser en tant que props dans les pages exploitant les données du fetch */}
          <LogementsContext.Provider
             value={{ logements, isDataLoading, errorState }}
          >
@@ -69,5 +63,5 @@ export default function App() {
    )
 }
 
-// export du contexte pour pouvoir l'utiliser dans les pages Home et Logement
+// export du contexte pour pouvoir l'utiliser dans les pages exploitant les données du fetch
 export { LogementsContext }

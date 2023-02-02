@@ -1,13 +1,13 @@
 import { ReactComponent as ArrowIcon } from './../../../assets/icons/arrow.svg'
 
 function ArrowsNavigation({ count, position, action }) {
-   // mise en place de la navigation par flèches dans le carrousel
+   // mise en place de la navigation par flèches pour le carrousel
 
    // n'affiche pas la navigation s'il n'y a qu'une image
    if (count === 1) {
       return null
    } else {
-      // la variable "arrowStyles" contient le style qui change selon la valeur de la prop "position"
+      // la variable "arrowStyles" contient le style qui change selon la valeur de la prop {position}
       let arrowStyles = {}
       switch (position) {
          case 'left':
@@ -50,6 +50,7 @@ function ArrowsNavigation({ count, position, action }) {
                fill="white"
                onClick={action}
                style={arrowStyles}
+               // change le texte alternatif en fonction de l'action lors du clic sur la flèche
                alt={action.name === 'removeCounter' ? 'Previous' : 'Next'}
             />
          </div>

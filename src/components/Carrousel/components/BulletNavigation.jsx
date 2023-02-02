@@ -12,7 +12,7 @@ function BulletsNavigation({ count, currentIndex, goToSlide }) {
       fontSize: '40px',
       userSelect: 'none',
    }
-   const images = Array.from(Array(count).keys())
+   const images = Array.from(Array(count).keys()) // création d'un tableau de valeurs allant de 0 à {count}, pour pouvoir utiliser 'images.map' dessus
 
    // n'affiche pas les bullets s'il n'y a qu'une image
    if (count === 1) {
