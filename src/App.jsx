@@ -23,7 +23,7 @@ const LogementsContext = React.createContext(null)
 export default function App() {
    // stockage des logements tirés du fetching de logements.json
    const [logements, setLogements] = useState([])
-   const [isDataLoading, setDataLoading] = useState(false)
+   const [isDataLoading, setDataLoading] = useState(true)
    const [errorState, setError] = useState(false)
 
    useEffect(() => {

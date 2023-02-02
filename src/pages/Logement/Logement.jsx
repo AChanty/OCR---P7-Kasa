@@ -221,7 +221,6 @@ import Tags from '../../components/Tags/Tags.jsx'
 import Rating from './../../components/Rating/Rating.jsx'
 import Collapse from './../../components/Collapse/Collapse.jsx'
 import Carrousel from './../../components/Carrousel/Carrousel.jsx'
-// import { useState, useEffect } from 'react'
 import Loading from '../../components/Loading/Loading'
 import { LogementsContext } from './../../App.jsx'
 
@@ -263,6 +262,8 @@ function Logement() {
             <Loading />
          ) : (
             <>
+               {/* {logement && (
+                  <> */}
                <Carrousel images={pictures} />
                <div className="logement_infos-wrapper">
                   <div className="logement_title-location-tags-container">
@@ -315,6 +316,8 @@ function Logement() {
                </div>
             </>
          )}
+         {/* </>
+         )} */}
       </div>
    )
 }
