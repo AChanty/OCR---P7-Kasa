@@ -16,10 +16,15 @@
    transform: translate(-50%, 0); /* permet de centrer l'élément absolute */
 }
 
+.carrousel-btn {
+   position: absolute;
+   border: none;
+   background: none;
+}
+
 .carrousel-arrow {
    user-select: none;
    cursor: pointer;
-   position: absolute;
    width: 20px;
    height: 12px;
 }

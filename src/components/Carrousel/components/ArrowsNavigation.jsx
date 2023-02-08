@@ -44,16 +44,14 @@ function ArrowsNavigation({ count, position, action }) {
             }
       }
       return (
-         <div>
+         <button className="carrousel-btn" onClick={action} style={arrowStyles}>
             <ArrowIcon
                className="carrousel-arrow"
                fill="white"
-               onClick={action}
-               style={arrowStyles}
                // change le texte alternatif en fonction de l'action lors du clic sur la flèche
                alt={action.name === 'removeCounter' ? 'Previous' : 'Next'}
             />
-         </div>
+         </button>
       )
    }
 }

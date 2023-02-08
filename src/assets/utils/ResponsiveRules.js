@@ -21,7 +21,6 @@ export default function ResponsiveRules(breakpoint, contentA, contentB) {
 
    useEffect(() => {
       const debouncedHandleResizeWindow = debounce(() => {
-         console.log('debounce trigger')
          setWidth(window.innerWidth)
       })
 

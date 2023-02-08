@@ -38,21 +38,19 @@ function Home() {
                   {errorState && ( // affiche une erreur si errorState est true
                      <p>Erreur lors de la récupération des données</p>
                   )}
-                  {logements && (
-                     <div className="card-container">
-                        {logements.map(
-                           // créé un composant Card pour chaque objet disponible dans logement.json
-                           (logement, index) => (
-                              <Card
-                                 link={`/logement/${logement.id}`}
-                                 key={index}
-                                 title={logement.title}
-                                 cover={logement.cover}
-                              />
-                           )
-                        )}
-                     </div>
-                  )}
+                  <div className="card-container">
+                     {logements.map(
+                        // créé un composant Card pour chaque objet disponible dans logement.json
+                        (logement, index) => (
+                           <Card
+                              link={`/logement/${logement.id}`}
+                              key={index}
+                              title={logement.title}
+                              cover={logement.cover}
+                           />
+                        )
+                     )}
+                  </div>
                </div>
             </>
          )}

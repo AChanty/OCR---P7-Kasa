@@ -19,8 +19,6 @@ export default function App() {
    const [errorState, setError] = useState(false)
 
    useEffect(() => {
-      setDataLoading(true) // active l'état de barre de chargement
-
       fetch('/logements.json')
          .then((response) => {
             if (response.ok) {
