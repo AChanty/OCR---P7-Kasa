@@ -6,7 +6,6 @@ function Collapse({ headerName, content }) {
    const [isOpen, setIsOpen] = useState(false)
 
    return (
-      // si le composant est ouvert, affiche le contenu qui contient les informations relatives à l'onglet ouvert
       <div className="collapse_item">
          <button className="collapse_head" onClick={() => setIsOpen(!isOpen)}>
             <h3>{headerName}</h3>
@@ -24,10 +23,8 @@ function Collapse({ headerName, content }) {
                isOpen ? 'collapse_content' : 'collapse_content-closed'
             }
          >
-            {isOpen
-               ? /* modification du contenu par rapport à l'état de "isOpen" */
-                 content
-               : null}
+            {/* affichage de {content} seulement si isOpen = true */}
+            {isOpen && content}
          </div>
       </div>
    )

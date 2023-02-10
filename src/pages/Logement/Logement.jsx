@@ -47,8 +47,6 @@ function Logement() {
             <Loading />
          ) : (
             <>
-               {/* {logement && (
-                  <> */}
                <Carrousel images={pictures} />
                <div className="logement_infos-wrapper">
                   <div className="logement_title-location-tags-container">
@@ -101,8 +99,6 @@ function Logement() {
                </div>
             </>
          )}
-         {/* </>
-         )} */}
       </div>
    )
 }

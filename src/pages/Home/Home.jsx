@@ -35,10 +35,10 @@ function Home() {
          ) : (
             <>
                <div className="home_cards-container">
-                  {errorState && ( // affiche une erreur si errorState est true
-                     <p>Erreur lors de la récupération des données</p>
-                  )}
                   <div className="card-container">
+                     {errorState && ( // affiche une erreur si errorState est true
+                        <p>Erreur lors de la récupération des données</p>
+                     )}
                      {logements.map(
                         // créé un composant Card pour chaque objet disponible dans logement.json
                         (logement, index) => (
