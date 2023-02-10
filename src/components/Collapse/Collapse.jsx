@@ -14,7 +14,6 @@ function Collapse({ headerName, content }) {
                   // modification de la classe par rapport à l'état de "isOpen"
                   isOpen ? 'collapse_head-closed' : 'collapse_head-opened'
                }
-               fill="white"
             />
          </button>
          <div

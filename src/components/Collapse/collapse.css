@@ -48,6 +48,7 @@
 .collapse_head-closed {
    transition: 0.4s ease;
    width: 15px;
+   fill: white;
 }
 
 .collapse_head-opened {
