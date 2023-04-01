@@ -18,23 +18,44 @@ export default function App() {
    const [isDataLoading, setDataLoading] = useState(true)
    const [errorState, setError] = useState(false)
 
+   // useEffect(() => {
+   //    fetch('/logements.json')
+   //       .then((response) => {
+   //          if (response.ok) {
+   //             return response.json()
+   //          }
+   //          throw new Error('Erreur lors de la récupération de la réponse')
+   //       })
+   //       .then((data) => {
+   //          setLogements(data) // passe les données de la réponse dans le state "logements"
+   //          setDataLoading(false) // désactive l'état de barre de chargement
+   //       })
+   //       .catch((error) => {
+   //          console.log(error)
+   //          setError(true) // active l'état d'erreur
+   //          setDataLoading(false) // désactive l'état de barre de chargement
+   //       })
+   // }, [])
+
    useEffect(() => {
-      fetch('/logements.json')
-         .then((response) => {
+      const fetchLogements = async () => {
+         try {
+            const response = await fetch('/logements.json')
             if (response.ok) {
-               return response.json()
+               const data = await response.json()
+               setLogements(data) // passe les données de la réponse dans le state "logements"
+               setDataLoading(false) // désactive l'état de barre de chargement
+            } else {
+               throw new Error('Erreur lors de la récupération de la réponse')
             }
-            throw new Error('Erreur lors de la récupération de la réponse')
-         })
-         .then((data) => {
-            setLogements(data) // passe les données de la réponse dans le state "logements"
-            setDataLoading(false) // désactive l'état de barre de chargement
-         })
-         .catch((error) => {
+         } catch (error) {
             console.log(error)
             setError(true) // active l'état d'erreur
             setDataLoading(false) // désactive l'état de barre de chargement
-         })
+         }
+      }
+
+      fetchLogements()
    }, [])
 
    return (
