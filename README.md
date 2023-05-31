@@ -1,3 +1,5 @@
+Project live at : https://anthony-chanty-kasa.vercel.app/
+
 ### `npm start`
 
 Runs the app in the development mode.
@@ -24,7 +26,8 @@ The page will reload when you make changes.
 
 ### Links
 
--  Live Site URL: use `npm start` and then open [http://localhost:3000](http://localhost:3000) to view it in your browser
+-  Live Site URL: https://anthony-chanty-kasa.vercel.app/
+-  Local Site : use `npm start` and then open [http://localhost:3000](http://localhost:3000) to view it in your browser
 
 ## My process
 
